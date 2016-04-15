@@ -1,33 +1,28 @@
 ﻿@model Calculator.Models.CalculatorItems
+
 @{
-    Layout = null;
+    ViewBag.Title = "Calculator";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>BKTraining Calculator</title>
-</head>
-<body>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div>
-        <h2>BKTraining Calculator</h2>
-        <hr />
-        @Html.ValidationSummary(true)
 
+    <div>
+        <h2>Calculator</h2>
+        <hr />
         @Html.EditorFor(model => model.Item1)
         @Html.DropDownList("Operator", EnumHelper.GetSelectList(typeof(Calculator.Models.CalculatorOperatorEnum)))
         @Html.EditorFor(model => model.Item2)
 
         <input type="submit" value="=" class="btn btn-default" />
-        @Html.EditorFor(model => model.Result)
+        @Html.DisplayFor(model => model.Result)
+    </div>
+    <div>
+        @Html.ValidationSummary(false)
     </div>
 }
-<div>
-</div>
-</body>
-</html>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
