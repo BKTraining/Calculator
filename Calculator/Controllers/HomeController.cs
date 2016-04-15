@@ -15,7 +15,7 @@ namespace Calculator.Controllers
         [HttpPost]
         public ActionResult Index(CalculatorItems model)
         {
-            model.Result = model.Item1 + model.Item2;
+         //   model.Result = model.Item1 + model.Item2;
             return View(model);
         }
     }
