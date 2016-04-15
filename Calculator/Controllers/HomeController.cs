@@ -8,14 +8,36 @@ namespace Calculator.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var model = new CalculatorItems();
-            return View(model);
+            return View();
         }
 
         [HttpPost]
         public ActionResult Index(CalculatorItems model)
         {
-            model.Result = model.Item1 + model.Item2;
+            model.Result = null;
+
+            if (ModelState.IsValid)
+            {
+                switch (model.Operator)
+                {
+                    case CalculatorOperatorEnum.Addition:
+                        model.Result = model.Item1 + model.Item2;
+                        break;
+
+                    case CalculatorOperatorEnum.Division:
+                        model.Result = model.Item1 / model.Item2;
+                        break;
+
+                    case CalculatorOperatorEnum.Multiplication:
+                        model.Result = model.Item1 * model.Item2;
+                        break;
+
+                    case CalculatorOperatorEnum.Subtraction:
+                        model.Result = model.Item1 - model.Item2;
+                        break;
+                }
+            }
+
             return View(model);
         }
     }
