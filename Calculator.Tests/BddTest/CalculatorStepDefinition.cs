@@ -1,5 +1,8 @@
 ﻿using Calculator.Models;
+using Calculator.Tests.BddTest;
+using Calculator.Tests.BddTest.PageObjects;
 using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +14,19 @@ namespace Calculator.Tests.Features
     [Binding]
     public sealed class CalculatorStepDefinition
     {
+        private IWebDriver _driver;
+        private StringBuilder _verificationErrors;
+        private string _baseUrl;
+        private IndexPage _indexPage;
+        
+        public CalculatorStepDefinition()
+        {
+            _driver = new DriverFactory().Create();
+            _verificationErrors = new StringBuilder();
+            _indexPage = new IndexPage(_driver);
+            _driver.Navigate().GoToUrl("http://localhost:8080/");
+        }
+
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
         private CalculatorItems calc = new CalculatorItems();
         private string calculateResult = string.Empty;
@@ -18,7 +34,7 @@ namespace Calculator.Tests.Features
         [Given("I have entered (.*) into the first operand of the calculator")]
         public void GivenIHaveEnteredSomethingIntoFirstOperandOfTheCalculator(double number)
         {
-            calc.Item1 = number;
+            _indexPage.Item1.SendKeys(number.ToString());
         }
 
 
@@ -43,25 +59,25 @@ namespace Calculator.Tests.Features
                     break;
             }
 
-            calc.Operator = result;
+            _indexPage.Operator.SendKeys(Operator);
         }
 
         [Given("I have entered (.*) into the second operand of the calculator")]
         public void GivenIHaveEnteredSomethingIntoSecondOperandOfTheCalculator(double number)
         {
-            calc.Item2 = number;
+            _indexPage.Item2.SendKeys(number.ToString());
         }
 
         [When("I press result")]
         public void WhenIPressResult()
         {
-            calculateResult = calc.calculate().ToString();
+            _indexPage.btnCalculate.Click();
         }
 
         [Then("the result should be (.*) on the screen")]
         public void ThenTheResultShouldBe(double result)
         {
-            Assert.AreEqual(result, calculateResult);
+            Assert.AreEqual(result.ToString(), _indexPage.Result.Text);
         }
     }
 }

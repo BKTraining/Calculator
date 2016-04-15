@@ -34,8 +34,8 @@ Scenario: Division of two numbers
 	And I have entered 25 into the second operand of the calculator
 	When I press result
 	Then the result should be 3 on the screen
-	
-	
+
+
 #@Calculator
 #Scenario: Division by 0 is not allowed
 #	Given I have entered 75 into the first operand of the calculator

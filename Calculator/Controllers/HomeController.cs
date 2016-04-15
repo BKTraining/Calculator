@@ -25,6 +25,11 @@ namespace Calculator.Controllers
                         break;
 
                     case CalculatorOperatorEnum.Division:
+                        if (model.Item2 == 0)
+                        {
+                            ModelState.AddModelError("Item2", "Division by zero is not allowed");
+                            break;
+                        }
                         model.Result = model.Item1 / model.Item2;
                         break;
 
@@ -40,5 +45,7 @@ namespace Calculator.Controllers
 
             return View(model);
         }
+
+
     }
 }

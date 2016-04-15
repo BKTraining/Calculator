@@ -15,10 +15,12 @@
         @Html.DropDownList("Operator", EnumHelper.GetSelectList(typeof(Calculator.Models.CalculatorOperatorEnum)))
         @Html.EditorFor(model => model.Item2)
 
-        <input type="submit" value="=" class="btn btn-default" />
-        @Html.DisplayFor(model => model.Result)
+        <input type="submit" id="btnCalculate" value="=" class="btn btn-default" />
+        <div id="Result">
+            @Html.DisplayFor(model => model.Result)
+        </div>
     </div>
-    <div>
+    <div id="ValidationSummary">
         @Html.ValidationSummary(false)
     </div>
 }

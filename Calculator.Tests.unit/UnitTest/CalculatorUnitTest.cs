@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Calculator.Models;
+using Calculator.Controllers;
 
 namespace Calculator.Tests.UnitTest
 {
@@ -11,8 +12,9 @@ namespace Calculator.Tests.UnitTest
         public void ShouldAddingToNumberDisplayTheCorrectRessult()
         {
             CalculatorItems calc = new CalculatorItems { Item1 = 1, Item2 = 5, Operator = CalculatorOperatorEnum.Addition };
-
-            Assert.AreEqual(6, calc.calculate());
+            HomeController ctrl = new HomeController();
+            ctrl.Index(calc);
+            Assert.AreEqual(6, calc.Result);
         }
     }
 }
