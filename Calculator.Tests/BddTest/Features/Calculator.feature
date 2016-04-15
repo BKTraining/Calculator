@@ -35,10 +35,11 @@ Scenario: Division of two numbers
 	When I press result
 	Then the result should be 3 on the screen
 	
-@Calculator
-Scenario: Division by 0 is not allowed
-	Given I have entered 75 into the first operand of the calculator
-	And I have choose Division as an operation into the calculator
-	And I have entered 0 into the second operand of the calculator
-	When I press result
-	Then the result should be error on the screen
+	
+#@Calculator
+#Scenario: Division by 0 is not allowed
+#	Given I have entered 75 into the first operand of the calculator
+#	And I have choose Division as an operation into the calculator
+#	And I have entered 0 into the second operand of the calculator
+#	When I press result
+#	Then the result should be error on the screen

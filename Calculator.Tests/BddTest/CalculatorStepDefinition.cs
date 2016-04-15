@@ -13,12 +13,12 @@ namespace Calculator.Tests.Features
     {
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
         private CalculatorItems calc = new CalculatorItems();
+        private string calculateResult = string.Empty;
 
         [Given("I have entered (.*) into the first operand of the calculator")]
         public void GivenIHaveEnteredSomethingIntoFirstOperandOfTheCalculator(double number)
         {
             calc.Item1 = number;
-          //  ScenarioContext.Current.Pending();
         }
 
 
@@ -55,17 +55,13 @@ namespace Calculator.Tests.Features
         [When("I press result")]
         public void WhenIPressResult()
         {
-            //TODO: implement act (action) logic
-            calc.Result = calc.calculate();
-          //  ScenarioContext.Current.Pending();
+            calculateResult = calc.calculate().ToString();
         }
 
         [Then("the result should be (.*) on the screen")]
         public void ThenTheResultShouldBe(double result)
         {
-            //TODO: implement assert (verification) logic
-            Assert.AreEqual(result, calc.Result);
-         //   ScenarioContext.Current.Pending();
+            Assert.AreEqual(result, calculateResult);
         }
     }
 }
