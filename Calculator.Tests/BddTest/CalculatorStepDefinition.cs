@@ -15,21 +15,33 @@ namespace Calculator.Tests.Features
     public sealed class CalculatorStepDefinition
     {
         private IWebDriver _driver;
-        private StringBuilder _verificationErrors;
-        private string _baseUrl;
         private IndexPage _indexPage;
-        
-        public CalculatorStepDefinition()
+        private CalculatorItems calc = new CalculatorItems();
+        private string calculateResult = string.Empty;
+
+        // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
+        [BeforeScenario]
+        public void ScenarioSetUp()
         {
             _driver = new DriverFactory().Create();
-            _verificationErrors = new StringBuilder();
             _indexPage = new IndexPage(_driver);
             _driver.Navigate().GoToUrl("http://localhost:8080/");
         }
 
-        // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
-        private CalculatorItems calc = new CalculatorItems();
-        private string calculateResult = string.Empty;
+        [AfterScenario]
+       public void ScenarioTearDown()
+        {
+            try
+            {
+                _driver.Quit();
+                _driver.Close();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if we are unable to close the browser
+            }
+        }
+
 
         [Given("I have entered (.*) into the first operand of the calculator")]
         public void GivenIHaveEnteredSomethingIntoFirstOperandOfTheCalculator(double number)
@@ -78,6 +90,7 @@ namespace Calculator.Tests.Features
         public void ThenTheResultShouldBe(double result)
         {
             Assert.AreEqual(result.ToString(), _indexPage.Result.Text);
+
         }
     }
 }

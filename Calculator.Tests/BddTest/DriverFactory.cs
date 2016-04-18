@@ -48,7 +48,7 @@ namespace Calculator.Tests.BddTest
                         throw new ArgumentOutOfRangeException();
                 }
 
-            driver.Manage().Window.Maximize();
+           // driver.Manage().Window.Maximize();
             var timeouts = driver.Manage().Timeouts();
 
             timeouts.ImplicitlyWait(TimeSpan.FromSeconds((double)Convert.ChangeType(ConfigurationManager.AppSettings["ImplicitlyWait"], typeof(double))));
