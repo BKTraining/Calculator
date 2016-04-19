@@ -92,5 +92,14 @@ namespace Calculator.Tests.Features
             Assert.AreEqual(result.ToString(), _indexPage.Result.Text);
 
         }
+
+        [Then("there is (.*) displayed on the screen")]
+        public void ThenTheErrorShouldBe(string message)
+        {
+            string temp = _indexPage.ValidationSummary.Text;
+
+            Assert.IsTrue(temp.IndexOf(message)>=0);
+
+        }
     }
 }
