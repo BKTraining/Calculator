@@ -3,6 +3,15 @@
 	As a math idiot
 	I want to be told the sum of two numbers
 
+	
+@Calculator
+Scenario: Substract two numbers
+	Given I have entered 75 into the first operand of the calculator
+	And I have choose Subtraction as an operation into the calculator
+	And I have entered 24 into the second operand of the calculator
+	When I press result
+	Then the result should be 51 on the screen
+
 @Calculator
 Scenario: Add two numbers
 	Given I have entered 50 into the first operand of the calculator
@@ -11,13 +20,6 @@ Scenario: Add two numbers
 	When I press result
 	Then the result should be 120 on the screen
 
-@Calculator
-Scenario: Substract two numbers
-	Given I have entered 75 into the first operand of the calculator
-	And I have choose Subtraction as an operation into the calculator
-	And I have entered 24 into the second operand of the calculator
-	When I press result
-	Then the result should be 51 on the screen
 
 @Calculator
 Scenario: Multiply two numbers
