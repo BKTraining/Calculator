@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests.bdd", "Cal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests.unit", "Calculator.Tests.unit\Calculator.Tests.unit.csproj", "{4AE67652-71AD-4CA5-B562-2405856C9C8B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Batch", "Batch", "{185B67C1-D6B5-4C1C-888B-27B60E9315A4}"
+	ProjectSection(SolutionItems) = preProject
+		..\deploy.bat = ..\deploy.bat
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
