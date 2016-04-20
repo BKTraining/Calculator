@@ -20,7 +20,7 @@ namespace Calculator.Tests.Features
         private string calculateResult = string.Empty;
 
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
-        [BeforeScenario]
+        [BeforeTestRun]
         public void ScenarioSetUp()
         {
             _driver = new DriverFactory().Create();
@@ -28,7 +28,7 @@ namespace Calculator.Tests.Features
             _driver.Navigate().GoToUrl("http://localhost:8080/");
         }
 
-        [AfterScenario]
+        [AfterTestRun]
        public void ScenarioTearDown()
         {
             try
