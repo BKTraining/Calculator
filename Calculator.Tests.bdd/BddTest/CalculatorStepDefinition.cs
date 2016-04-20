@@ -90,7 +90,14 @@ namespace Calculator.Tests.Features
         public void ThenTheResultShouldBe(double result)
         {
             Assert.AreEqual(result.ToString(), _indexPage.Result.Text);
+        }
 
+
+        [Then("there is (.*) displayed on the screen")]
+        public void ThenTheErrorShouldBe(string message)
+        {
+            Assert.IsTrue(_indexPage.ValidationSummary.Text.IndexOf(message) >= 0);
         }
     }
+
 }
