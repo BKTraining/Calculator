@@ -43,4 +43,4 @@ Scenario: Division by 0 is not allowed
 	And I have choose Division as an operation into the calculator
 	And I have entered 0 into the second operand of the calculator
 	When I press result
-	Then the result should be error on the screen
+	Then there is Division by zero is not allowed displayed on the screen
