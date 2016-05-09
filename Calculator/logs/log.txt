@@ -1,3 +1,6 @@
 INFO  2016-05-02 15:11:36,720   983ms Calculator             Index              - HomeController get Index
 INFO  2016-05-02 15:13:18,256 102519ms Calculator             Index              - Requested operation is 10 Addition 10
 INFO  2016-05-02 15:13:18,256 102519ms Calculator             Index              - Result is 20
+2016-05-09 14:10:39,337 [5] INFO  Calculator - HomeController get Index
+2016-05-09 14:11:05,101 [6] INFO  Calculator - Requested operation is 5 Addition 5
+2016-05-09 14:11:05,101 [6] INFO  Calculator - Result is 10

@@ -16,5 +16,6 @@ namespace Calculator
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             log4net.Config.XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/log4net.config")));
         }
+        
     }
 }
