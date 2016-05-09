@@ -53,23 +53,23 @@ namespace Calculator.Tests.Features
         [Given("I have choose (.*) as an operation into the calculator")]
         public void GivenIHaveEnteredSomethingIntoTheCalculator(string Operator)
         {
-            CalculatorOperatorEnum result;
-            switch (Operator)
-            {
-                default:
-                case "Addition":
-                    result = CalculatorOperatorEnum.Addition;
-                    break;
-                case "Subtraction":
-                    result = CalculatorOperatorEnum.Subtraction;
-                    break;
-                case "Multiplication":
-                    result = CalculatorOperatorEnum.Multiplication;
-                    break;
-                case "Division":
-                    result = CalculatorOperatorEnum.Division;
-                    break;
-            }
+            //CalculatorOperatorEnum result;
+            //switch (Operator)
+            //{
+            //    default:
+            //    case "Addition":
+            //        result = CalculatorOperatorEnum.Addition;
+            //        break;
+            //    case "Subtraction":
+            //        result = CalculatorOperatorEnum.Subtraction;
+            //        break;
+            //    case "Multiplication":
+            //        result = CalculatorOperatorEnum.Multiplication;
+            //        break;
+            //    case "Division":
+            //        result = CalculatorOperatorEnum.Division;
+            //        break;
+            //}
 
             _indexPage.Operator.SendKeys(Operator);
         }

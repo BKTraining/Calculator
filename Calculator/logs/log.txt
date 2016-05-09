@@ -1,6 +1,17 @@
-INFO  2016-05-02 15:11:36,720   983ms Calculator             Index              - HomeController get Index
-INFO  2016-05-02 15:13:18,256 102519ms Calculator             Index              - Requested operation is 10 Addition 10
-INFO  2016-05-02 15:13:18,256 102519ms Calculator             Index              - Result is 20
-2016-05-09 14:10:39,337 [5] INFO  Calculator - HomeController get Index
-2016-05-09 14:11:05,101 [6] INFO  Calculator - Requested operation is 5 Addition 5
-2016-05-09 14:11:05,101 [6] INFO  Calculator - Result is 10
+2016-05-09 17:18:06,369 [5] DEBUG - Begin request : GET / ----  
+2016-05-09 17:18:06,535 [5] INFO  - HomeController get Index
+2016-05-09 17:18:06,544 [5] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-05-09 17:18:09,203 [5] DEBUG - End request : GET / ----   ProcessTime : 2840,65007482557 ms.
+2016-05-09 17:18:09,583 [7] DEBUG - Begin request : GET /favicon.ico ----  
+2016-05-09 17:18:09,607 [5] DEBUG - Begin request : GET /__browserLink/requestData/fe20c81dc01b446fb4788f2f46477f1b --version=2--  
+2016-05-09 17:18:09,611 [7] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 28,5921566891753 ms.
+2016-05-09 17:18:09,638 [5] DEBUG - End request : GET /__browserLink/requestData/fe20c81dc01b446fb4788f2f46477f1b --version=2--   ProcessTime : 30,9369906456809 ms.
+2016-05-09 17:18:09,722 [5] DEBUG - Begin request : GET /favicon.ico ----  
+2016-05-09 17:18:09,728 [5] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 5,76891374308112 ms.
+2016-05-09 17:20:21,876 [5] DEBUG - Begin request : POST / ----  __RequestVerificationToken=hJKCePbMs_3ErkNkmM-PJZ7WhuuWuxVIvBXV76hPsQdqYb3uepZ_oe4CIhid4aq07aub5Usig4q5YDwdFiQ5EVoHMRD7KPpAa-6rxq0KPwk1&Item1=4&Operator=1&Item2=45
+2016-05-09 17:20:21,930 [5] INFO  - Requested operation is 4 Addition 45
+2016-05-09 17:20:21,930 [5] INFO  - Result is 49
+2016-05-09 17:20:21,930 [5] DEBUG - OnActionExecuted : POST HomeController.Index  __RequestVerificationToken=hJKCePbMs_3ErkNkmM-PJZ7WhuuWuxVIvBXV76hPsQdqYb3uepZ_oe4CIhid4aq07aub5Usig4q5YDwdFiQ5EVoHMRD7KPpAa-6rxq0KPwk1&Item1=4&Operator=1&Item2=45
+2016-05-09 17:20:21,947 [5] DEBUG - End request : POST / ----  __RequestVerificationToken=hJKCePbMs_3ErkNkmM-PJZ7WhuuWuxVIvBXV76hPsQdqYb3uepZ_oe4CIhid4aq07aub5Usig4q5YDwdFiQ5EVoHMRD7KPpAa-6rxq0KPwk1&Item1=4&Operator=1&Item2=45 ProcessTime : 71,4765430008102 ms.
+2016-05-09 17:20:22,450 [7] DEBUG - Begin request : GET /__browserLink/requestData/f5af9db821e84985a1d18d0f9f1324f7 --version=2--  
+2016-05-09 17:20:22,453 [7] DEBUG - End request : GET /__browserLink/requestData/f5af9db821e84985a1d18d0f9f1324f7 --version=2--   ProcessTime : 2,56036239567558 ms.

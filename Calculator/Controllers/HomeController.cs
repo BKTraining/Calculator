@@ -5,9 +5,8 @@ using System.Web.Mvc;
 
 namespace Calculator.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        private ILog aLogger = LogManager.GetLogger("Calculator");
 
         [HttpGet]
         public ActionResult Index()
