@@ -53,24 +53,6 @@ namespace Calculator.Tests.Features
         [Given("I have choose (.*) as an operation into the calculator")]
         public void GivenIHaveEnteredSomethingIntoTheCalculator(string Operator)
         {
-            //CalculatorOperatorEnum result;
-            //switch (Operator)
-            //{
-            //    default:
-            //    case "Addition":
-            //        result = CalculatorOperatorEnum.Addition;
-            //        break;
-            //    case "Subtraction":
-            //        result = CalculatorOperatorEnum.Subtraction;
-            //        break;
-            //    case "Multiplication":
-            //        result = CalculatorOperatorEnum.Multiplication;
-            //        break;
-            //    case "Division":
-            //        result = CalculatorOperatorEnum.Division;
-            //        break;
-            //}
-
             _indexPage.Operator.SendKeys(Operator);
         }
 
@@ -99,14 +81,6 @@ namespace Calculator.Tests.Features
             Assert.IsTrue(_indexPage.ValidationSummary.Text.IndexOf(message) >= 0);
         }
 
-        [Then("there is (.*) displayed on the screen")]
-        public void ThenTheErrorShouldBe(string message)
-        {
-            string temp = _indexPage.ValidationSummary.Text;
-
-            Assert.IsTrue(temp.IndexOf(message)>=0);
-
-        }
     }
 
 }
