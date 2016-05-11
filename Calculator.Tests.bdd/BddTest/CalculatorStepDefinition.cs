@@ -98,6 +98,15 @@ namespace Calculator.Tests.Features
         {
             Assert.IsTrue(_indexPage.ValidationSummary.Text.IndexOf(message) >= 0);
         }
+
+        [Then("there is (.*) displayed on the screen")]
+        public void ThenTheErrorShouldBe(string message)
+        {
+            string temp = _indexPage.ValidationSummary.Text;
+
+            Assert.IsTrue(temp.IndexOf(message)>=0);
+
+        }
     }
 
 }

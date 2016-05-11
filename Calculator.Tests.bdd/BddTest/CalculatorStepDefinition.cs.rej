@@ -1,0 +1,9 @@
+diff a/Calculator.Tests.bdd/BddTest/CalculatorStepDefinition.cs b/Calculator.Tests.bdd/BddTest/CalculatorStepDefinition.cs	(rejected hunks)
+@@ -53,7 +53,6 @@
+         [Given("I have choose (.*) as an operation into the calculator")]
+         public void GivenIHaveEnteredSomethingIntoTheCalculator(string Operator)
+         {
+-                case "Subtraction":
+             //CalculatorOperatorEnum result;
+             //switch (Operator)
+             //{
