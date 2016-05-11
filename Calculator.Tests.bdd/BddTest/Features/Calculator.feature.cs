@@ -163,19 +163,6 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Division by 0 is not allowed", new string[] {
                         "Calculator"});
-<<<<<<< HEAD:Calculator.Tests.bdd/BddTest/Features/Calculator.feature.cs
-#line 41
-this.ScenarioSetup(scenarioInfo);
-#line 42
- testRunner.Given("I have entered 75 into the first operand of the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 43
- testRunner.And("I have choose Division as an operation into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
- testRunner.And("I have entered 0 into the second operand of the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
- testRunner.When("I press result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 46
-=======
 #line 40
 this.ScenarioSetup(scenarioInfo);
 #line 41
@@ -187,7 +174,6 @@ this.ScenarioSetup(scenarioInfo);
 #line 44
  testRunner.When("I press result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 45
->>>>>>> c2f35906c2a7bcafe9a8a37b753d9df4c79284c5:Calculator.Tests/BddTest/Features/Calculator.feature.cs
  testRunner.Then("there is Division by zero is not allowed displayed on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
