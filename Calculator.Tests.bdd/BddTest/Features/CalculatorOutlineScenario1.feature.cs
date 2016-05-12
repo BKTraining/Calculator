@@ -75,7 +75,7 @@ namespace Calculator.Tests.bdd.BddTest.Features
         [NUnit.Framework.TestCaseAttribute("50", "10", "Subtraction", "40", new string[0])]
         [NUnit.Framework.TestCaseAttribute("-10", "-10", "Multiplication", "100", new string[0])]
         [NUnit.Framework.TestCaseAttribute("-10", "10", "Multiplication", "-100", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("1", "-5", "Division", "-0.2", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("1", "-5", "Division", "-0,2", new string[0])]
         [NUnit.Framework.TestCaseAttribute("50", "10", "Division", "5", new string[0])]
         [NUnit.Framework.TestCaseAttribute("0", "10", "Division", "0", new string[0])]
         public virtual void GettingTheResultOfAnOperationWithTwoNumbers(string firstValue, string secondValue, string operation, string result, string[] exampleTags)

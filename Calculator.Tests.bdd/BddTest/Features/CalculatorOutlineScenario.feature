@@ -21,7 +21,7 @@ Scenario Outline: Getting the result of an operation with two numbers
 	| 50		 | 10			| Subtraction		| 40	 |
 	| -10		 | -10			| Multiplication	| 100	 |
 	| -10		 | 10			| Multiplication	| -100	 |
-	| 1			 | -5			| Division			| -0.2	 |
+	| 1			 | -5			| Division			| -0,2	 |
 	| 50		 | 10			| Division			| 5		 |
 	| 0			 | 10			| Division			| 0		 |
 
