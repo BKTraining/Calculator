@@ -102,6 +102,11 @@
       <DependentUpon>Calculator.feature</DependentUpon>
     </Compile>
     <Compile Include="BddTest\CalculatorStepDefinition.cs" />
+    <Compile Include="BddTest\Features\CalculatorOutlineScenario1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalculatorOutlineScenario.feature</DependentUpon>
+    </Compile>
     <Compile Include="BddTest\PageObjects\IndexPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +121,10 @@
     <None Include="BddTest\Features\Calculator.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Calculator.feature.cs</LastGenOutput>
+    </None>
+    <None Include="BddTest\Features\CalculatorOutlineScenario.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CalculatorOutlineScenario1.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

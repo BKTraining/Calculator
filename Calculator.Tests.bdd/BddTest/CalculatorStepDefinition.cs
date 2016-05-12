@@ -56,6 +56,8 @@ namespace Calculator.Tests.Features
             _indexPage.Operator.SendKeys(Operator);
         }
 
+
+
         [Given("I have entered (.*) into the second operand of the calculator")]
         public void GivenIHaveEnteredSomethingIntoSecondOperandOfTheCalculator(double number)
         {
