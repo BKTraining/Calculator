@@ -71,9 +71,10 @@ namespace Calculator.Tests.Features
         }
 
         [Then("the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBe(double result)
+        public void ThenTheResultShouldBe(String result)
         {
-            Assert.AreEqual(result.ToString(), _indexPage.Result.Text);
+            //  Assert.AreEqual(result.ToString(), _indexPage.Result.Text);
+            Assert.AreEqual(result, _indexPage.Result.Text);
         }
 
 
