@@ -3,6 +3,9 @@
 	As a math idiot
 	I want to be told the result of an operation with two number
 
+	Background: 
+		Given I'm browsing the calculator website
+
 @Calculator
 Scenario Outline: Getting the result of an operation with two numbers
 	Given I have entered <FirstValue> into the first operand of the calculator

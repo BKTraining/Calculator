@@ -3,6 +3,8 @@
 	As a math idiot
 	I want to be told the sum of two numbers
 
+	Background: 
+		Given I'm browsing the calculator website
 	
 @Calculator
 Scenario: Substract two numbers

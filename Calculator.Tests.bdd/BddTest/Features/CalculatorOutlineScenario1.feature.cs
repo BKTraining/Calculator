@@ -64,6 +64,14 @@ namespace Calculator.Tests.bdd.BddTest.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+ #line 7
+  testRunner.Given("I\'m browsing the calculator website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Getting the result of an operation with two numbers")]
         [NUnit.Framework.CategoryAttribute("Calculator")]
@@ -87,17 +95,19 @@ namespace Calculator.Tests.bdd.BddTest.Features
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Getting the result of an operation with two numbers", @__tags);
-#line 7
-this.ScenarioSetup(scenarioInfo);
-#line 8
- testRunner.Given(string.Format("I have entered {0} into the first operand of the calculator", firstValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And(string.Format("I have choose  {0} as an operation into the calculator", operation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.And(string.Format("I have entered {0} into the second operand of the calculator", secondValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+ this.FeatureBackground();
 #line 11
- testRunner.When("I press result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I have entered {0} into the first operand of the calculator", firstValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
+ testRunner.And(string.Format("I have choose  {0} as an operation into the calculator", operation), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.And(string.Format("I have entered {0} into the second operand of the calculator", secondValue), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.When("I press result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
  testRunner.Then(string.Format("the result should be {0} on the screen", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -110,17 +120,19 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Division by 0 is not allowed", new string[] {
                         "Calculator"});
-#line 29
-this.ScenarioSetup(scenarioInfo);
-#line 30
- testRunner.Given("I have entered 75 into the first operand of the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 31
- testRunner.And("I have choose Division as an operation into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
- testRunner.And("I have entered 0 into the second operand of the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 6
+ this.FeatureBackground();
 #line 33
- testRunner.When("I press result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have entered 75 into the first operand of the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 34
+ testRunner.And("I have choose Division as an operation into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.And("I have entered 0 into the second operand of the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.When("I press result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
  testRunner.Then("there is Division by zero is not allowed displayed on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

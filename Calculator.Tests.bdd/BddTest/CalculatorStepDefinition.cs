@@ -25,7 +25,6 @@ namespace Calculator.Tests.Features
         {
             _driver = new DriverFactory().Create();
             _indexPage = new IndexPage(_driver);
-            _driver.Navigate().GoToUrl("http://localhost:8080/");
         }
 
         [AfterFeature]
@@ -42,10 +41,16 @@ namespace Calculator.Tests.Features
             }
         }
 
+        [Given("I'm browsing the calculator website")]
+        public void GivenINavigateCalculatorWebsite()
+        {
+            _driver.Navigate().GoToUrl("http://localhost:8080/");
+        }
+
+
         [Given("I have entered (.*) into the first operand of the calculator")]
         public void GivenIHaveEnteredSomethingIntoFirstOperandOfTheCalculator(double number)
         {
-            _driver.Navigate().GoToUrl("http://localhost:8080/");
             _indexPage.Item1.SendKeys(number.ToString());
         }
 
