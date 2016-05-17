@@ -28,6 +28,7 @@ Scenario Outline: Getting the result of an operation with two numbers
 	| 50		 | 10			| Division			| 5		 |
 	| 0			 | 10			| Division			| 0		 |
 
+
 	@Calculator
 Scenario: Division by 0 is not allowed
 	Given I have entered 75 into the first operand of the calculator

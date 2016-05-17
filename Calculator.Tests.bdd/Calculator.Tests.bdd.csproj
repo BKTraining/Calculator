@@ -107,7 +107,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CalculatorOutlineScenario.feature</DependentUpon>
     </Compile>
+    <Compile Include="BddTest\Features\SpecFlowTagDemo.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecFlowTagDemo.feature</DependentUpon>
+    </Compile>
     <Compile Include="BddTest\PageObjects\IndexPage.cs" />
+    <Compile Include="BddTest\SpecFlowTagDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +131,10 @@
     <None Include="BddTest\Features\CalculatorOutlineScenario.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CalculatorOutlineScenario1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="BddTest\Features\SpecFlowTagDemo.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SpecFlowTagDemo.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
