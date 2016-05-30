@@ -69,9 +69,9 @@ namespace Calculator.Tests.Features
         {
             _indexPage.Item2.SendKeys(number.ToString());
         }
-
-        [When("I press result")]
-        public void WhenIPressResult()
+        
+        [When]
+        public void WhenIpressresult()
         {
             _indexPage.btnCalculate.Click();
         }

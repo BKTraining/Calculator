@@ -8,6 +8,7 @@ namespace Calculator.Tests.bdd.AdvencedBdd
 {
 
     [Binding]
+    [Scope(Feature = "MultiLineCalculator")]
     public sealed class MultiLineCalculatorStepDefinition
     {
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
