@@ -1,0 +1,63 @@
+﻿@model Calculator.Models.CalculatorItems
+
+@{
+    ViewBag.Title = "Calculator";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h2>Calculator - Web API</h2>
+        <hr />
+        <p>This view use ajax and a web api to get the result</p>
+        <hr />
+        @Html.EditorFor(model => model.FirstValue)
+        @Html.DropDownList("Operator", EnumHelper.GetSelectList(typeof(Calculator.Models.CalculatorOperatorEnum)))
+        @Html.EditorFor(model => model.SecondValue)
+
+        <input type="button" id="btnCalculate" value="=" class="btn btn-default" onclick="Calculate" />
+        <div id="Result">
+            @Html.DisplayFor(model => model.Result)
+        </div>
+    </div>
+    <div id="ValidationSummary">
+        @Html.ValidationSummary(false)
+    </div>
+}
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+<script>
+
+    function getResult(CalculatorItem) {
+        return CalculatorItem.Result;
+    }
+
+    function Calculate() {
+        var operation = {
+            "FirstValue": $('#FirstValue').val(),
+            "Operator": $('#Operator').val(),
+            "SecondValue": $('#SecondValue').val()
+        };
+        
+        $.ajax({
+            type: "POST",
+            url: "../api/calculator/calculate",
+            data: JSON.stringify(operation),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            processData: true,
+            success: function (data, status, jqXHR) {
+                console.log(data);
+                console.log(status);
+                console.log(jqXHR);
+                $('#Result').html(getResult(data));
+            },
+            error: function (xhr) {
+                alert(xhr.responseText);
+            }
+        });
+    }
+       
+
+</script>

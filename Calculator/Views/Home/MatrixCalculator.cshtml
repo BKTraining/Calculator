@@ -1,0 +1,30 @@
+﻿@model Calculator.Models.Matrix
+
+@{
+    ViewBag.Title = "MatrixCalculator";
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h2>MatrixCalculator</h2>
+
+        <hr />
+        <p>This view will calculate several properties of a matrix</p>
+        <p>Type your matric (line by line, item separate by coma)</p>
+        <textarea wrap="off" cols="30" rows="7" name="txtMatrix"></textarea>
+        <hr />
+        <input type="submit" id="btnCalculate" value="=" class="btn btn-default" />
+        <div id="Result">
+            @Html.DisplayFor(model => model.determinant)
+        </div>
+    </div>
+    <div id="ValidationSummary">
+        @Html.ValidationSummary(false)
+    </div>
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
