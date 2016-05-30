@@ -9,11 +9,13 @@
     @Html.AntiForgeryToken()
 
     <div>
-        <h2>Calculator</h2>
+        <h2>Calculator - standart MVC</h2>
         <hr />
-        @Html.EditorFor(model => model.Item1)
+        <p>This view use the traditionnal MVC pattern to get the result</p>
+        <hr />
+        @Html.EditorFor(model => model.FirstValue)
         @Html.DropDownList("Operator", EnumHelper.GetSelectList(typeof(Calculator.Models.CalculatorOperatorEnum)))
-        @Html.EditorFor(model => model.Item2)
+        @Html.EditorFor(model => model.SecondValue)
 
         <input type="submit" id="btnCalculate" value="=" class="btn btn-default" />
         <div id="Result">

@@ -1,17 +1,18 @@
 ﻿using Calculator.Models;
 using log4net;
 using log4net.Config;
+using Calculator.Core;
 using System.Web.Mvc;
+using System.Collections.Generic;
 
 namespace Calculator.Controllers
 {
     public class HomeController : BaseController
     {
-
         [HttpGet]
         public ActionResult Index()
         {
-            aLogger.Info("HomeController get Index");
+            aLogger.Info("display HomeController/Index view");
 
             return View();
         }
@@ -23,32 +24,12 @@ namespace Calculator.Controllers
 
             if (ModelState.IsValid)
             {
-                switch (model.Operator)
+                aLogger.Info(string.Format("Requested operation is {0} {1} {2}", model.FirstValue, model.Operator, model.SecondValue));
+                model = CalculatorCore.calculate(model);
+                if (model.Message != string.Empty)
                 {
-                    case CalculatorOperatorEnum.Addition:
-                        model.Result = model.Item1 + model.Item2;
-                        break;
-
-                    case CalculatorOperatorEnum.Division:
-                        if (model.Item2 == 0)
-                        {
-                            aLogger.Info("Division by zero is not allowed.");
-                            ModelState.AddModelError("Item2", "Division by zero is not allowed");
-                            break;
-                        }
-                        model.Result = model.Item1 / model.Item2;
-                        break;
-
-                    case CalculatorOperatorEnum.Multiplication:
-                        model.Result = model.Item1 * model.Item2;
-                        break;
-
-                    case CalculatorOperatorEnum.Subtraction:
-                        model.Result = model.Item1 - model.Item2;
-                        break;
+                    ModelState.AddModelError("Message", model.Message);
                 }
-                
-                aLogger.Info(string.Format("Requested operation is {0} {1} {2}", model.Item1, model.Operator, model.Item2));
                 if (model.Result != null)
                 {
                     aLogger.Info("Result is " + model.Result);
@@ -56,12 +37,62 @@ namespace Calculator.Controllers
             }
             else
             {
-
                 aLogger.Info("ModelState is invalid");
             }
             return View(model);
         }
 
+        [HttpPost]
+        public ActionResult MatrixCalculator(CalculatorItems model)
+        {
+            model.Result = null;
 
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult MultiLineCalculator(ListOfCalculatorItem toCalculateLine)
+        {
+            ListOfCalculatorItem result = new ListOfCalculatorItem();
+            
+            CalculatorItems temp;
+            foreach (CalculatorItems c in toCalculateLine)
+            {
+                temp = CalculatorCore.calculate(c);
+                if (temp != null) result.Add(temp);
+            }
+
+            return View(result);
+        }
+        
+
+        public ActionResult MultiLineCalculator()
+        {
+            aLogger.Info("display HomeController/MultiLineCalculator view");
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult CalcWithApi()
+        {
+            aLogger.Info("display HomeController/CalcWithApi view");
+
+            return View();
+        }
+
+        public ActionResult MatrixCalculator()
+        {
+            aLogger.Info("display HomeController/MatrixCalculator view");
+
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
     }
 }

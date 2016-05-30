@@ -12,6 +12,8 @@ using TechTalk.SpecFlow;
 namespace Calculator.Tests.Features
 {
     [Binding]
+    [Scope(Feature = "Calculator")]
+    [Scope(Feature = "CalculatorOutlineScenario")]
     public sealed class CalculatorStepDefinition
     {
         private static IWebDriver _driver;
@@ -86,6 +88,7 @@ namespace Calculator.Tests.Features
         {
             Assert.IsTrue(_indexPage.ValidationSummary.Text.IndexOf(message) >= 0);
         }
+
 
     }
 

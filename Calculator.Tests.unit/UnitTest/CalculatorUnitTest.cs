@@ -14,7 +14,7 @@ namespace Calculator.Tests.UnitTest
         [TestCase(10000000000000000011000000000000000001d, 10000000000000000011000000000000000001d, 20000000000000000022000000000000000002d)]
         public void ShouldAddingNumbersGiveTheCorrectRessult(double n1, double n2, double resultat)
         {
-            CalculatorItems calc = new CalculatorItems { Item1 = n1, Item2 = n2, Operator = CalculatorOperatorEnum.Addition };
+            CalculatorItems calc = new CalculatorItems { FirstValue = n1, SecondValue = n2, Operator = CalculatorOperatorEnum.Addition };
             HomeController ctrl = new HomeController();
             ctrl.Index(calc);
             Assert.AreEqual(resultat, calc.Result);
@@ -28,7 +28,7 @@ namespace Calculator.Tests.UnitTest
         [TestCase(20000000000000000022000000000000000002d, 10000000000000000011000000000000000001d, 10000000000000000011000000000000000001d)]
         public void ShouldSubstractingNumbersGiveTheCorrectRessult(double n1, double n2, double resultat)
         {
-            CalculatorItems calc = new CalculatorItems { Item1 = n1, Item2 = n2, Operator = CalculatorOperatorEnum.Subtraction };
+            CalculatorItems calc = new CalculatorItems { FirstValue = n1, SecondValue = n2, Operator = CalculatorOperatorEnum.Subtraction };
             HomeController ctrl = new HomeController();
             ctrl.Index(calc);
             Assert.AreEqual(resultat, calc.Result);
@@ -43,7 +43,7 @@ namespace Calculator.Tests.UnitTest
         [TestCase(10000000000000000011000000000000000001d, 10000000000000000011000000000000000221d, 1E+74)]
         public void ShouldMultiplyingNumbersGiveTheCorrectRessult(double n1, double n2, double resultat)
         {
-            CalculatorItems calc = new CalculatorItems { Item1 = n1, Item2 = n2, Operator = CalculatorOperatorEnum.Multiplication };
+            CalculatorItems calc = new CalculatorItems { FirstValue = n1, SecondValue = n2, Operator = CalculatorOperatorEnum.Multiplication };
             HomeController ctrl = new HomeController();
             ctrl.Index(calc);
             Assert.AreEqual(resultat, calc.Result);
@@ -56,7 +56,7 @@ namespace Calculator.Tests.UnitTest
         [TestCase(-10, -10, 1)]
         public void ShouldDivisingNumbersGiveTheCorrectRessult(double n1, double n2, double resultat)
         {
-            CalculatorItems calc = new CalculatorItems { Item1 = n1, Item2 = n2, Operator = CalculatorOperatorEnum.Division };
+            CalculatorItems calc = new CalculatorItems { FirstValue = n1, SecondValue = n2, Operator = CalculatorOperatorEnum.Division };
             HomeController ctrl = new HomeController();
             ctrl.Index(calc);
             Assert.AreEqual(resultat, calc.Result);
@@ -65,7 +65,7 @@ namespace Calculator.Tests.UnitTest
         [Test]
         public void ShoudDivisingByZeroGiveNoResult()
         {
-            CalculatorItems calc = new CalculatorItems { Item1 = 10, Item2 = 0, Operator = CalculatorOperatorEnum.Division };
+            CalculatorItems calc = new CalculatorItems { FirstValue = 10, SecondValue = 0, Operator = CalculatorOperatorEnum.Division };
             HomeController ctrl = new HomeController();
             ctrl.Index(calc);
             Assert.AreEqual(null, calc.Result);
