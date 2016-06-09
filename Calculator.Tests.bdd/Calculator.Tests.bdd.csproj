@@ -134,6 +134,7 @@
     </Compile>
     <Compile Include="PageObjects\IndexPage.cs" />
     <Compile Include="AdvencedBdd\SpecFlowTagDemo.cs" />
+    <Compile Include="PageObjects\PageMultiLine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

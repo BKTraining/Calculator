@@ -76,13 +76,11 @@ namespace Calculator.Tests.bdd.AdvencedBdd.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Calculate a list of operation")]
-        [NUnit.Framework.IgnoreAttribute("Ignored scenario")]
         [NUnit.Framework.CategoryAttribute("MultilineCalculator")]
         public virtual void CalculateAListOfOperation()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate a list of operation", new string[] {
-                        "MultilineCalculator",
-                        "ignore"});
+                        "MultilineCalculator"});
 #line 12
 this.ScenarioSetup(scenarioInfo);
 #line 6
@@ -94,15 +92,15 @@ this.ScenarioSetup(scenarioInfo);
                         "SecondValue"});
             table1.AddRow(new string[] {
                         "3",
-                        "+",
+                        "Addition",
                         "2"});
             table1.AddRow(new string[] {
                         "1",
-                        "-",
+                        "Addition",
                         "1"});
             table1.AddRow(new string[] {
                         "1",
-                        "*",
+                        "Addition",
                         "18"});
 #line 13
  testRunner.Given("I have entered the following value in the textbox calculator", ((string)(null)), table1, "Given ");

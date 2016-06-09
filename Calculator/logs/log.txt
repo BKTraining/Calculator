@@ -5242,3 +5242,249 @@
 2016-05-31 16:09:58,952 [723] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,90222237046863 ms.
 2016-05-31 16:09:59,090 [561] DEBUG - Begin request : GET /__browserLink/requestData/5b3aeaf1845c4ba8ac6766aa62a03e35 --version=2--  
 2016-05-31 16:09:59,092 [561] DEBUG - End request : GET /__browserLink/requestData/5b3aeaf1845c4ba8ac6766aa62a03e35 --version=2--   ProcessTime : 1,9888182295188 ms.
+2016-06-09 13:54:43,861 [7] DEBUG - Begin request : GET / ----  
+2016-06-09 13:54:44,379 [7] INFO  - display HomeController/Index view
+2016-06-09 13:54:44,388 [7] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 13:54:50,020 [7] DEBUG - End request : GET / ----   ProcessTime : 6183,11815813041 ms.
+2016-06-09 13:54:50,186 [7] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 13:54:50,190 [6] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 13:54:50,242 [6] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 51,3719685853733 ms.
+2016-06-09 13:54:50,252 [6] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 13:54:50,349 [7] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 163,303749676267 ms.
+2016-06-09 13:54:50,362 [7] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 13:54:50,464 [7] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 100,497536212282 ms.
+2016-06-09 13:54:50,467 [7] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 13:54:50,513 [6] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 261,263898139263 ms.
+2016-06-09 13:54:50,545 [6] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 13:54:50,635 [7] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 168,730098658175 ms.
+2016-06-09 13:54:50,639 [7] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 13:54:50,684 [7] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 44,1075388192166 ms.
+2016-06-09 13:54:50,686 [7] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 13:54:50,702 [7] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 16,6895004541869 ms.
+2016-06-09 13:54:50,716 [6] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 171,617353223404 ms.
+2016-06-09 13:54:51,619 [6] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 13:54:51,672 [6] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 53,509996164265 ms.
+2016-06-09 13:54:51,848 [6] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 13:54:51,849 [6] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,43914728070284 ms.
+2016-06-09 13:54:52,505 [6] DEBUG - Begin request : GET /__browserLink/requestData/64cc28cd88104bcbaeff0d9b85819902 --version=2--  
+2016-06-09 13:54:52,578 [6] DEBUG - End request : GET /__browserLink/requestData/64cc28cd88104bcbaeff0d9b85819902 --version=2--   ProcessTime : 72,6506976642977 ms.
+2016-06-09 13:56:36,976 [6] DEBUG - Begin request : GET / ----  
+2016-06-09 13:56:36,983 [6] INFO  - display HomeController/Index view
+2016-06-09 13:56:36,983 [6] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 13:56:37,001 [6] DEBUG - End request : GET / ----   ProcessTime : 25,7472109854767 ms.
+2016-06-09 13:56:37,550 [6] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 13:56:37,554 [9] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 13:56:37,619 [7] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 13:56:37,624 [7] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 3,99530837133157 ms.
+2016-06-09 13:56:37,639 [7] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 13:56:37,753 [9] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 198,754218135133 ms.
+2016-06-09 13:56:37,757 [9] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 13:56:37,973 [6] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 423,811594159613 ms.
+2016-06-09 13:56:37,979 [7] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 340,109371779999 ms.
+2016-06-09 13:56:37,983 [7] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 13:56:37,991 [10] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 13:56:38,050 [9] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 292,053884609657 ms.
+2016-06-09 13:56:38,054 [9] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 13:56:38,073 [7] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 90,2494251730881 ms.
+2016-06-09 13:56:39,366 [9] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 1312,10253316375 ms.
+2016-06-09 13:56:39,419 [10] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 1428,08167598152 ms.
+2016-06-09 13:56:40,715 [9] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 13:56:40,716 [9] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,03637377551948 ms.
+2016-06-09 13:56:40,790 [9] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 13:56:40,793 [9] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 2,55146775529291 ms.
+2016-06-09 13:56:41,558 [9] DEBUG - Begin request : GET /__browserLink/requestData/f5e216f5d3f844b494a3357dbc9ff806 --version=2--  
+2016-06-09 13:56:41,561 [9] DEBUG - End request : GET /__browserLink/requestData/f5e216f5d3f844b494a3357dbc9ff806 --version=2--   ProcessTime : 3,03104129324429 ms.
+2016-06-09 14:01:30,933 [6] DEBUG - Begin request : GET / ----  
+2016-06-09 14:01:30,937 [6] INFO  - display HomeController/Index view
+2016-06-09 14:01:30,937 [6] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 14:01:30,985 [6] DEBUG - End request : GET / ----   ProcessTime : 51,8912221402548 ms.
+2016-06-09 14:01:31,175 [12] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 14:01:31,178 [13] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 14:01:31,180 [6] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 14:01:31,198 [6] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 18,0475810336346 ms.
+2016-06-09 14:01:31,205 [6] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 14:01:31,237 [6] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 31,941133628217 ms.
+2016-06-09 14:01:31,239 [6] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 14:01:31,247 [13] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 69,4908029827426 ms.
+2016-06-09 14:01:31,252 [11] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 14:01:31,269 [13] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 14:01:31,324 [6] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 84,6195561043439 ms.
+2016-06-09 14:01:31,345 [11] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 93,2407864494022 ms.
+2016-06-09 14:01:31,363 [12] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 188,282107000366 ms.
+2016-06-09 14:01:31,404 [11] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 14:01:31,475 [13] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 205,606487725435 ms.
+2016-06-09 14:01:31,588 [11] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 183,030691426428 ms.
+2016-06-09 14:01:32,345 [13] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 14:01:32,345 [13] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,66570737736848 ms.
+2016-06-09 14:01:32,424 [11] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 14:01:32,426 [11] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,80480077004833 ms.
+2016-06-09 14:01:33,489 [13] DEBUG - Begin request : GET /__browserLink/requestData/0b4c9568f30240d0838487311cdec6b9 --version=2--  
+2016-06-09 14:01:33,491 [13] DEBUG - End request : GET /__browserLink/requestData/0b4c9568f30240d0838487311cdec6b9 --version=2--   ProcessTime : 2,0172808607065 ms.
+2016-06-09 14:01:34,399 [11] DEBUG - Begin request : POST / ----  __RequestVerificationToken=wq0MHdHKhREkg1V2ipDNMMbrD0e_Mz2emfKsqUz_5EVMsqjHqCXWjiMig3eXEI06RVsF9LoH9ZuN67DB-X3GGagCYm6Irg5PejZ-7WtzvaI1&FirstValue=0&Operator=4&SecondValue=10
+2016-06-09 14:01:34,594 [11] INFO  - Requested operation is 0 Division 10
+2016-06-09 14:01:34,595 [11] INFO  - Result is 0
+2016-06-09 14:01:34,595 [11] DEBUG - OnActionExecuted : POST HomeController.Index  __RequestVerificationToken=wq0MHdHKhREkg1V2ipDNMMbrD0e_Mz2emfKsqUz_5EVMsqjHqCXWjiMig3eXEI06RVsF9LoH9ZuN67DB-X3GGagCYm6Irg5PejZ-7WtzvaI1&FirstValue=0&Operator=4&SecondValue=10
+2016-06-09 14:01:34,635 [11] DEBUG - End request : POST / ----  __RequestVerificationToken=wq0MHdHKhREkg1V2ipDNMMbrD0e_Mz2emfKsqUz_5EVMsqjHqCXWjiMig3eXEI06RVsF9LoH9ZuN67DB-X3GGagCYm6Irg5PejZ-7WtzvaI1&FirstValue=0&Operator=4&SecondValue=10 ProcessTime : 252,231360952047 ms.
+2016-06-09 14:01:36,054 [11] DEBUG - Begin request : GET /__browserLink/requestData/96278007a82e455ba690e69bfa9c1057 --version=2--  
+2016-06-09 14:01:36,058 [11] DEBUG - End request : GET /__browserLink/requestData/96278007a82e455ba690e69bfa9c1057 --version=2--   ProcessTime : 3,85706831234915 ms.
+2016-06-09 14:13:37,227 [16] DEBUG - Begin request : GET /Home/MultiLineCalculator ----  
+2016-06-09 14:13:37,229 [16] INFO  - display HomeController/MultiLineCalculator view
+2016-06-09 14:13:37,229 [16] DEBUG - OnActionExecuted : GET HomeController.MultiLineCalculator  
+2016-06-09 14:13:37,243 [16] DEBUG - End request : GET /Home/MultiLineCalculator ----   ProcessTime : 15,9005934509199 ms.
+2016-06-09 14:13:37,386 [15] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 14:13:37,395 [10] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 14:13:37,438 [15] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 52,9958626115681 ms.
+2016-06-09 14:13:37,479 [15] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 14:13:37,481 [15] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 1,91232081592355 ms.
+2016-06-09 14:13:37,485 [15] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 14:13:37,490 [15] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 4,6980286711589 ms.
+2016-06-09 14:13:37,536 [15] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 14:13:37,537 [15] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 1,47413396229716 ms.
+2016-06-09 14:13:37,548 [15] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 14:13:37,551 [10] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 159,175321248137 ms.
+2016-06-09 14:13:37,635 [15] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 87,3758239470182 ms.
+2016-06-09 14:13:37,658 [15] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 14:13:37,659 [15] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 1,22666719004467 ms.
+2016-06-09 14:13:37,664 [10] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 14:13:37,862 [10] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 198,387284645241 ms.
+2016-06-09 14:13:38,152 [10] DEBUG - Begin request : GET /__browserLink/requestData/034068386f9b458cb33a42ce51ac6f56 --version=2--  
+2016-06-09 14:13:38,155 [10] DEBUG - End request : GET /__browserLink/requestData/034068386f9b458cb33a42ce51ac6f56 --version=2--   ProcessTime : 2,74304117036423 ms.
+2016-06-09 14:13:44,714 [16] DEBUG - Begin request : POST /Home/MultiLineCalculator ----  __RequestVerificationToken=ry1daFbe-GaKXuhQNtHxiphU1sxMZ2eRcUGiI4nlgInyySinNUhtJKbXMjqiLpOmh-YmqIbwl3ePE4mG6dqi87M-7Lv2mXFXTiyDJizU9jU1&allCalculation=2%2b3%0d%0a3*4
+2016-06-09 14:13:44,719 [16] DEBUG - OnActionExecuted : POST HomeController.MultiLineCalculator  __RequestVerificationToken=ry1daFbe-GaKXuhQNtHxiphU1sxMZ2eRcUGiI4nlgInyySinNUhtJKbXMjqiLpOmh-YmqIbwl3ePE4mG6dqi87M-7Lv2mXFXTiyDJizU9jU1&allCalculation=2%2b3%0d%0a3*4
+2016-06-09 14:13:44,759 [16] DEBUG - End request : POST /Home/MultiLineCalculator ----  __RequestVerificationToken=ry1daFbe-GaKXuhQNtHxiphU1sxMZ2eRcUGiI4nlgInyySinNUhtJKbXMjqiLpOmh-YmqIbwl3ePE4mG6dqi87M-7Lv2mXFXTiyDJizU9jU1&allCalculation=2%2b3%0d%0a3*4 ProcessTime : 45,1827392779688 ms.
+2016-06-09 14:13:45,910 [10] DEBUG - Begin request : GET /__browserLink/requestData/47c007cc35564352aa45bd35ede95f72 --version=2--  
+2016-06-09 14:13:45,915 [10] DEBUG - End request : GET /__browserLink/requestData/47c007cc35564352aa45bd35ede95f72 --version=2--   ProcessTime : 5,09653550785515 ms.
+2016-06-09 15:06:41,904 [22] DEBUG - Begin request : GET / ----  
+2016-06-09 15:06:42,183 [22] INFO  - display HomeController/Index view
+2016-06-09 15:06:42,189 [22] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 15:06:50,678 [22] DEBUG - End request : GET / ----   ProcessTime : 8774,02870358558 ms.
+2016-06-09 15:06:50,982 [21] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 15:06:50,986 [22] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 15:06:50,987 [22] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 1,48437396666623 ms.
+2016-06-09 15:06:51,000 [22] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 15:06:51,100 [21] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 118,530610573061 ms.
+2016-06-09 15:06:51,102 [21] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 15:06:51,134 [22] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 134,369337330917 ms.
+2016-06-09 15:06:51,137 [22] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 15:06:51,157 [22] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 19,3783549347648 ms.
+2016-06-09 15:06:51,165 [21] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 63,3335736889914 ms.
+2016-06-09 15:06:51,166 [21] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 15:06:51,178 [21] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 12,0349918015965 ms.
+2016-06-09 15:06:51,179 [21] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 15:06:51,299 [21] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 119,556317677362 ms.
+2016-06-09 15:06:51,301 [21] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 15:06:51,319 [21] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 17,3209673902794 ms.
+2016-06-09 15:06:52,281 [21] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:06:52,285 [21] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 3,80416162310896 ms.
+2016-06-09 15:06:52,314 [21] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:06:52,315 [21] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,41952060566213 ms.
+2016-06-09 15:06:52,518 [21] DEBUG - Begin request : GET /__browserLink/requestData/12dc0200a07541d684684bd6d453a77b --version=2--  
+2016-06-09 15:06:52,551 [21] DEBUG - End request : GET /__browserLink/requestData/12dc0200a07541d684684bd6d453a77b --version=2--   ProcessTime : 26,2557978691404 ms.
+2016-06-09 15:15:22,666 [21] DEBUG - Begin request : GET / ----  
+2016-06-09 15:15:22,904 [21] INFO  - display HomeController/Index view
+2016-06-09 15:15:22,916 [21] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 15:15:32,975 [21] DEBUG - End request : GET / ----   ProcessTime : 10317,7746422505 ms.
+2016-06-09 15:15:33,116 [22] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 15:15:33,116 [21] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 15:15:33,116 [21] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 1,36490724902709 ms.
+2016-06-09 15:15:33,116 [21] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 15:15:33,225 [21] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 110,690607227992 ms.
+2016-06-09 15:15:33,240 [21] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 15:15:33,287 [22] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 185,568932509411 ms.
+2016-06-09 15:15:33,303 [22] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 15:15:33,334 [22] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 30,5766530460386 ms.
+2016-06-09 15:15:33,334 [22] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 15:15:33,350 [21] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 107,160792388605 ms.
+2016-06-09 15:15:33,350 [21] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 15:15:33,365 [22] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 20,5853954497687 ms.
+2016-06-09 15:15:33,365 [22] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 15:15:33,397 [22] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 39,0600699989632 ms.
+2016-06-09 15:15:33,459 [21] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 109,825326858806 ms.
+2016-06-09 15:15:34,131 [21] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:15:34,147 [21] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 3,53706817581576 ms.
+2016-06-09 15:15:34,241 [21] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:15:34,241 [21] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,32992056743278 ms.
+2016-06-09 15:15:34,318 [21] DEBUG - Begin request : GET /__browserLink/requestData/5a0e0167d79548878eb5411f0f6125af --version=2--  
+2016-06-09 15:15:34,318 [21] DEBUG - End request : GET /__browserLink/requestData/5a0e0167d79548878eb5411f0f6125af --version=2--   ProcessTime : 10,094510973658 ms.
+2016-06-09 15:17:00,433 [3] DEBUG - Begin request : GET / ----  
+2016-06-09 15:17:00,606 [3] INFO  - display HomeController/Index view
+2016-06-09 15:17:00,611 [3] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 15:17:05,670 [3] DEBUG - End request : GET / ----   ProcessTime : 5237,69482141646 ms.
+2016-06-09 15:17:06,005 [22] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 15:17:06,020 [3] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 15:17:06,031 [3] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 10,4089644411582 ms.
+2016-06-09 15:17:06,110 [3] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 15:17:06,169 [3] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 59,5464787398309 ms.
+2016-06-09 15:17:06,174 [3] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 15:17:06,335 [22] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 329,380833869156 ms.
+2016-06-09 15:17:06,337 [22] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 15:17:06,375 [3] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 201,169579165687 ms.
+2016-06-09 15:17:06,377 [3] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 15:17:06,378 [22] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 42,1179913036763 ms.
+2016-06-09 15:17:06,435 [3] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 58,8749051199595 ms.
+2016-06-09 15:17:06,438 [3] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 15:17:06,458 [3] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 20,0665685617359 ms.
+2016-06-09 15:17:06,466 [22] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 15:17:06,618 [22] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 151,742358076739 ms.
+2016-06-09 15:17:08,540 [22] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:17:08,567 [22] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 26,9644915048497 ms.
+2016-06-09 15:17:08,647 [22] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:17:08,649 [22] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,94261416218204 ms.
+2016-06-09 15:17:08,676 [22] DEBUG - Begin request : GET /__browserLink/requestData/72f1ef852e1140e3ab574933bdf6b022 --version=2--  
+2016-06-09 15:17:08,691 [22] DEBUG - End request : GET /__browserLink/requestData/72f1ef852e1140e3ab574933bdf6b022 --version=2--   ProcessTime : 15,000753066988 ms.
+2016-06-09 15:18:22,602 [3] DEBUG - Begin request : GET / ----  
+2016-06-09 15:18:22,609 [3] INFO  - display HomeController/Index view
+2016-06-09 15:18:22,609 [3] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 15:18:22,624 [3] DEBUG - End request : GET / ----   ProcessTime : 21,8666759964484 ms.
+2016-06-09 15:18:22,833 [13] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 15:18:22,860 [21] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 15:18:22,864 [3] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 15:18:22,885 [3] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 21,9609693700136 ms.
+2016-06-09 15:18:22,898 [3] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 15:18:23,648 [3] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 749,726613216688 ms.
+2016-06-09 15:18:23,658 [3] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 15:18:23,882 [21] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 1021,30987575888 ms.
+2016-06-09 15:18:23,886 [21] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 15:18:24,489 [21] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 602,998017279154 ms.
+2016-06-09 15:18:24,558 [3] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 899,138090298919 ms.
+2016-06-09 15:18:24,568 [13] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 1735,61503386241 ms.
+2016-06-09 15:18:24,870 [3] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 15:18:24,884 [20] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 15:18:25,868 [3] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 998,41749265813 ms.
+2016-06-09 15:18:26,079 [20] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 1195,08402990252 ms.
+2016-06-09 15:18:26,430 [3] DEBUG - Begin request : GET /MultilineCalculator ----  
+2016-06-09 15:18:26,431 [3] DEBUG - End request : GET /MultilineCalculator ----   ProcessTime : 1,38922725940363 ms.
+2016-06-09 15:18:26,488 [3] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:18:26,490 [3] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,58848067775176 ms.
+2016-06-09 15:18:27,895 [20] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:18:27,898 [20] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 3,88394832381795 ms.
+2016-06-09 15:18:27,930 [20] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:18:27,934 [20] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 4,65066865095196 ms.
+2016-06-09 15:18:28,101 [21] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:18:28,101 [21] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,44085394809768 ms.
+2016-06-09 15:22:02,007 [20] DEBUG - Begin request : GET / ----  
+2016-06-09 15:22:02,361 [20] INFO  - display HomeController/Index view
+2016-06-09 15:22:02,374 [20] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 15:22:07,067 [20] DEBUG - End request : GET / ----   ProcessTime : 5061,28258614724 ms.
+2016-06-09 15:22:07,272 [19] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 15:22:07,274 [3] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 15:22:07,284 [19] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 12,9902988758609 ms.
+2016-06-09 15:22:07,294 [20] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 15:22:07,329 [19] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 15:22:07,331 [3] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 57,9571447283818 ms.
+2016-06-09 15:22:07,336 [3] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 15:22:07,359 [3] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 23,3728099723989 ms.
+2016-06-09 15:22:07,361 [3] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 15:22:07,378 [3] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 16,7748338239291 ms.
+2016-06-09 15:22:07,393 [19] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 64,1152273558303 ms.
+2016-06-09 15:22:07,494 [3] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 15:22:07,506 [21] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 15:22:07,548 [21] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 41,9673779060812 ms.
+2016-06-09 15:22:07,550 [20] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 257,412376495947 ms.
+2016-06-09 15:22:07,725 [3] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 230,766605127085 ms.
+2016-06-09 15:22:08,914 [19] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:22:08,918 [19] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 3,48032148493717 ms.
+2016-06-09 15:22:08,947 [19] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 15:22:08,949 [19] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 2,06762754885442 ms.
+2016-06-09 15:22:09,229 [19] DEBUG - Begin request : GET /__browserLink/requestData/69bc08236ea746858034ee3c24fae386 --version=2--  
+2016-06-09 15:22:09,241 [19] DEBUG - End request : GET /__browserLink/requestData/69bc08236ea746858034ee3c24fae386 --version=2--   ProcessTime : 11,8528050571968 ms.

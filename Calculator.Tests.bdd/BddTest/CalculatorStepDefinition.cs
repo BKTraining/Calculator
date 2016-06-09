@@ -46,7 +46,7 @@ namespace Calculator.Tests.Features
         [Given("I'm browsing the calculator website")]
         public void GivenINavigateCalculatorWebsite()
         {
-            _driver.Navigate().GoToUrl("http://localhost:8080/");
+            _driver.Navigate().GoToUrl("http://localhost:8081/");
         }
 
 
@@ -70,7 +70,7 @@ namespace Calculator.Tests.Features
             _indexPage.Item2.SendKeys(number.ToString());
         }
         
-        [When]
+        [When("I press result")]
         public void WhenIpressresult()
         {
             _indexPage.btnCalculate.Click();
