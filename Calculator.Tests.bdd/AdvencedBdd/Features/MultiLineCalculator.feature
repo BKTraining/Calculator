@@ -8,7 +8,11 @@
 		  And I'm on the Multiline calculator page
 	
 
+<<<<<<< Updated upstream
 @MultilineCalculator
+=======
+@MultilineCalculator 
+>>>>>>> Stashed changes
 Scenario: Calculate a list of operation
 	Given I have entered the following value in the textbox calculator
 	|  FirstValue | Operator | SecondValue	|

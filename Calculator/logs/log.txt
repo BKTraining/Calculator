@@ -5242,6 +5242,7 @@
 2016-05-31 16:09:58,952 [723] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,90222237046863 ms.
 2016-05-31 16:09:59,090 [561] DEBUG - Begin request : GET /__browserLink/requestData/5b3aeaf1845c4ba8ac6766aa62a03e35 --version=2--  
 2016-05-31 16:09:59,092 [561] DEBUG - End request : GET /__browserLink/requestData/5b3aeaf1845c4ba8ac6766aa62a03e35 --version=2--   ProcessTime : 1,9888182295188 ms.
+<<<<<<< Updated upstream
 2016-06-09 13:54:43,861 [7] DEBUG - Begin request : GET / ----  
 2016-06-09 13:54:44,379 [7] INFO  - display HomeController/Index view
 2016-06-09 13:54:44,388 [7] DEBUG - OnActionExecuted : GET HomeController.Index  
@@ -5488,3 +5489,37 @@
 2016-06-09 15:22:08,949 [19] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 2,06762754885442 ms.
 2016-06-09 15:22:09,229 [19] DEBUG - Begin request : GET /__browserLink/requestData/69bc08236ea746858034ee3c24fae386 --version=2--  
 2016-06-09 15:22:09,241 [19] DEBUG - End request : GET /__browserLink/requestData/69bc08236ea746858034ee3c24fae386 --version=2--   ProcessTime : 11,8528050571968 ms.
+=======
+2016-06-09 14:41:43,643 [5] DEBUG - Begin request : GET / ----  
+2016-06-09 14:41:43,890 [5] INFO  - display HomeController/Index view
+2016-06-09 14:41:43,894 [5] DEBUG - OnActionExecuted : GET HomeController.Index  
+2016-06-09 14:41:46,934 [5] DEBUG - End request : GET / ----   ProcessTime : 3303,42258907507 ms.
+2016-06-09 14:41:46,963 [7] DEBUG - Begin request : GET /Content/site.css ----  
+2016-06-09 14:41:46,963 [8] DEBUG - Begin request : GET /Content/bootstrap.css ----  
+2016-06-09 14:41:46,965 [7] DEBUG - End request : GET /Content/site.css ----   ProcessTime : 2,35925607101117 ms.
+2016-06-09 14:41:46,982 [6] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.js ----  
+2016-06-09 14:41:47,023 [5] DEBUG - Begin request : GET /Scripts/modernizr-2.6.2.js ----  
+2016-06-09 14:41:47,023 [7] DEBUG - Begin request : GET /Scripts/jquery-1.10.2.min.js ----  
+2016-06-09 14:41:47,120 [8] DEBUG - End request : GET /Content/bootstrap.css ----   ProcessTime : 155,833097065619 ms.
+2016-06-09 14:41:47,122 [8] DEBUG - Begin request : GET /Scripts/jquery.validate.unobtrusive.min.js ----  
+2016-06-09 14:41:47,157 [8] DEBUG - End request : GET /Scripts/jquery.validate.unobtrusive.min.js ----   ProcessTime : 35,3487503896814 ms.
+2016-06-09 14:41:47,158 [8] DEBUG - Begin request : GET /Scripts/jquery.validate.min.js ----  
+2016-06-09 14:41:47,220 [8] DEBUG - End request : GET /Scripts/jquery.validate.min.js ----   ProcessTime : 62,096607623258 ms.
+2016-06-09 14:41:47,221 [8] DEBUG - Begin request : GET /Scripts/bootstrap.js ----  
+2016-06-09 14:41:47,232 [5] DEBUG - End request : GET /Scripts/modernizr-2.6.2.js ----   ProcessTime : 209,194106863139 ms.
+2016-06-09 14:41:47,249 [8] DEBUG - End request : GET /Scripts/bootstrap.js ----   ProcessTime : 28,5570692369173 ms.
+2016-06-09 14:41:47,249 [6] DEBUG - End request : GET /Scripts/jquery-1.10.2.js ----   ProcessTime : 267,394863005351 ms.
+2016-06-09 14:41:47,257 [7] DEBUG - End request : GET /Scripts/jquery-1.10.2.min.js ----   ProcessTime : 233,970465039007 ms.
+2016-06-09 14:41:47,361 [6] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 14:41:47,476 [6] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 115,20552725332 ms.
+2016-06-09 14:41:47,483 [7] DEBUG - Begin request : GET /favicon.ico ----  
+2016-06-09 14:41:47,484 [7] DEBUG - End request : GET /favicon.ico ----   ProcessTime : 1,18379746575615 ms.
+2016-06-09 14:41:48,041 [8] DEBUG - Begin request : GET /__browserLink/requestData/afa53b55b66b45acae192bf513db7d99 --version=2--  
+2016-06-09 14:41:48,095 [8] DEBUG - End request : GET /__browserLink/requestData/afa53b55b66b45acae192bf513db7d99 --version=2--   ProcessTime : 54,076868899001 ms.
+2016-06-09 14:41:49,172 [7] DEBUG - Begin request : GET /Home/MultiLineCalculator ----  
+2016-06-09 14:41:49,174 [7] INFO  - display HomeController/MultiLineCalculator view
+2016-06-09 14:41:49,175 [7] DEBUG - OnActionExecuted : GET HomeController.MultiLineCalculator  
+2016-06-09 14:41:49,185 [7] DEBUG - End request : GET /Home/MultiLineCalculator ----   ProcessTime : 12,5907171804901 ms.
+2016-06-09 14:41:49,408 [6] DEBUG - Begin request : GET /__browserLink/requestData/535cc2f8b2d6413b8c69ac3d8e481a7e --version=2--  
+2016-06-09 14:41:49,410 [6] DEBUG - End request : GET /__browserLink/requestData/535cc2f8b2d6413b8c69ac3d8e481a7e --version=2--   ProcessTime : 1,96316019720764 ms.
+>>>>>>> Stashed changes

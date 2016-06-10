@@ -27,6 +27,7 @@ namespace Calculator.Tests.BddTest.PageObjects
         [FindsBy(How = How.Id, Using = "Operator")]
         public IWebElement Operator { get; set; }
 
+
         [FindsBy(How = How.Id, Using = "btnCalculate")]
         public IWebElement btnCalculate { get; set; }
 
