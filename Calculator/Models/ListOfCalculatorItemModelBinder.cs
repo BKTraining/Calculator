@@ -28,6 +28,7 @@ namespace Calculator.Models
         ListOfCalculatorItem TryParse(string textToParse)
         {
             ListOfCalculatorItem result = null;
+            string test = "test";
             string[] listOfCalc = textToParse.Split(new string[] { "\n", "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
             if (listOfCalc.Count()>0)
             {

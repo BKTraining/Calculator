@@ -1,7 +1,7 @@
 ﻿@model Calculator.Models.ListOfCalculatorItem
 
 @{
-    ViewBag.Title = "MatrixCalculator";
+    ViewBag.Title = "MultiLineCalculator";
 }
 @using (Html.BeginForm())
 {
@@ -18,7 +18,11 @@
             2+3<br />
             3*4
         </p>
+<<<<<<< Updated upstream
         <textarea wrap="off" cols="30" rows="7" id="allCalculation" name="allCalculation"></textarea>
+=======
+        <textarea wrap="off" cols="30" rows="7" name="allCalculation" id="allCalculation"></textarea>
+>>>>>>> Stashed changes
         <hr />
         <input type="submit" id="btnCalculate" value="=" class="btn btn-default" />
         <div id="Result">

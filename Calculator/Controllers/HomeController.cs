@@ -56,10 +56,14 @@ namespace Calculator.Controllers
             ListOfCalculatorItem result = new ListOfCalculatorItem();
             
             CalculatorItems temp;
-            foreach (CalculatorItems c in toCalculateLine)
-            {
-                temp = CalculatorCore.calculate(c);
-                if (temp != null) result.Add(temp);
+
+            if (toCalculateLine != null)
+            { 
+                foreach (CalculatorItems c in toCalculateLine)
+                {
+                    temp = CalculatorCore.calculate(c);
+                    if (temp != null) result.Add(temp);
+                }
             }
 
             return View(result);
