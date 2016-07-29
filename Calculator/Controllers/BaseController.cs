@@ -36,6 +36,6 @@ namespace Calculator.Controllers
 
             base.OnActionExecuted(filterContext);
         }
-
+        
     }
 }
