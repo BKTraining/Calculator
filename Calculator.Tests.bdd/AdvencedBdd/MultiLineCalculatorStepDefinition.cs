@@ -52,36 +52,49 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         [Given("I'm on the Multiline calculator page")]
         public void GivenINavigateMultilineCalculatorWebsite()
         {
-            _driver.Navigate().GoToUrl("http://localhost:8081/MultilineCalculator");
+            _driver.Navigate().GoToUrl("http://localhost:8081/Home/MultilineCalculator");
         }
 
 
         [Given("I have entered the following value in the textbox calculator")]
         public void GivenIHaveEnteredSomethingIntoTheCalculator(Table number)
         {
-            //TODO: implement arrange (precondition) logic
-            // For storing and retrieving scenario-specific data see http://go.specflow.org/doc-sharingdata 
-            // To use the multiline text or the table argument of the scenario,
-            // additional string/Table parameters can be defined on the step definition
-            // method. 
             myNumbers = number.CreateSet<CalculatorItems>();
-           
+            var toInsert = string.Empty;
+
+            foreach (CalculatorItems ci in myNumbers)
+            {
+                toInsert += ci.FirstValue + ci.OperatorChar + ci.SecondValue + "\r\n";
+            }
+
+            _pageMultiLine.AllCalculation.SendKeys(toInsert);
         }
 
         [When("I press result")]
         public void WhenIPressAdd()
         {
-            //TODO: implement act (action) logic
             _pageMultiLine.btnCalculate.Click();
-            ScenarioContext.Current.Pending();
         }
 
         [Then("the result should be on the screen")]
-        public void ThenTheResultShouldBe(Table result)
+        public void ThenTheResultShouldBe(Table expectedResult)
         {
-            //TODO: implement assert (verification) logic
-            Assert.AreEqual(result, _pageMultiLine.Result.Text);
-            ScenarioContext.Current.Pending();
+            var temp = _pageMultiLine.Result.Text;
+
+            myNumbers = expectedResult.CreateSet<CalculatorItems>();
+
+            var expectedResultStr = string.Empty;
+
+            foreach (var ci in myNumbers)
+            {
+                expectedResultStr += ci.FirstValue + ci.OperatorChar + ci.SecondValue + "=" + ci.Result + "\r\n";
+            }
+
+            temp = _pageMultiLine.Result.Text.Replace(" ", "");
+            temp = temp.Replace(",", ".");
+            temp += "\r\n";
+
+            Assert.AreEqual(expectedResultStr, temp);
         }
     }
 }

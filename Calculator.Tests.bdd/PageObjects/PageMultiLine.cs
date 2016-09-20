@@ -20,7 +20,7 @@ namespace Calculator.Tests.bdd.PageObjects
             PageFactory.InitElements(_driver, this);
         }
 
-        [FindsBy(How = How.Id, Using = "AllCalculation")]
+        [FindsBy(How = How.Id, Using = "allCalculation")]
         public IWebElement AllCalculation { get; set; }
 
         [FindsBy(How = How.Id, Using = "btnCalculate")]
