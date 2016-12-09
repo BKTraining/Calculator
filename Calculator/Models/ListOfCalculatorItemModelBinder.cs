@@ -17,7 +17,7 @@ namespace Calculator.Models
 
             var request = controllerContext.HttpContext.Request;
 
-            string textToParse = request.Form["allCalculation"];
+            string textToParse = request.Form["AllCalculation"];
 
             ListOfCalculatorItem result = TryParse(textToParse);
 

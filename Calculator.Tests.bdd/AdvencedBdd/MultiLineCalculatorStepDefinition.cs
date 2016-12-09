@@ -43,6 +43,14 @@ namespace Calculator.Tests.bdd.AdvencedBdd
             }
         }
 
+
+        [StepArgumentTransformation]
+        public IEnumerable<CalculatorItems> BooksTransform(Table CalculatorItemsList)
+        {
+            return CalculatorItemsList.CreateSet<CalculatorItems>();
+        }
+
+
         [Given("I'm browsing the calculator website")]
         public void GivenINavigateCalculatorWebsite()
         {
@@ -52,36 +60,72 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         [Given("I'm on the Multiline calculator page")]
         public void GivenINavigateMultilineCalculatorWebsite()
         {
-            _driver.Navigate().GoToUrl("http://localhost:8081/MultilineCalculator");
+            _driver.Navigate().GoToUrl("http://localhost:8081/Home/MultilineCalculator");
         }
-
 
         [Given("I have entered the following value in the textbox calculator")]
-        public void GivenIHaveEnteredSomethingIntoTheCalculator(Table number)
+        public void GivenIHaveEnteredSomethingIntoTheCalculator(IEnumerable<CalculatorItems> numberList)
         {
-            //TODO: implement arrange (precondition) logic
-            // For storing and retrieving scenario-specific data see http://go.specflow.org/doc-sharingdata 
-            // To use the multiline text or the table argument of the scenario,
-            // additional string/Table parameters can be defined on the step definition
-            // method. 
-            myNumbers = number.CreateSet<CalculatorItems>();
-           
+            StringBuilder sb = new StringBuilder();
+            string operat = "";
+            foreach (var item in numberList)
+            {
+                switch (item.Operator.ToString().ToLower())
+                {
+                    case "addition":
+                        operat = "+";
+                        break;
+                    case "subtraction":
+                        operat = "-";
+                        break;
+                    case "multiplication":
+                        operat = "*";
+                        break;
+                    case "division":
+                        operat = "/";
+                        break;
+                }
+                sb.AppendFormat("{0}{1}{2}\n", item.FirstValue.ToString(), operat, item.SecondValue.ToString());
+
+            }
+            _pageMultiLine.AllCalculation.SendKeys(sb.ToString());
         }
+
+
 
         [When("I press result")]
         public void WhenIPressAdd()
         {
-            //TODO: implement act (action) logic
             _pageMultiLine.btnCalculate.Click();
-            ScenarioContext.Current.Pending();
         }
 
         [Then("the result should be on the screen")]
-        public void ThenTheResultShouldBe(Table result)
+        public void ThenTheResultShouldBe(IEnumerable<CalculatorItems> result)
         {
-            //TODO: implement assert (verification) logic
-            Assert.AreEqual(result, _pageMultiLine.Result.Text);
-            ScenarioContext.Current.Pending();
+            StringBuilder sb = new StringBuilder();
+            string operat = "";
+            foreach (var item in result)
+            {
+                switch (item.Operator.ToString().ToLower())
+                {
+                    case "addition":
+                        operat = "+";
+                        break;
+                    case "subtraction":
+                        operat = "-";
+                        break;
+                    case "multiplication":
+                        operat = "*";
+                        break;
+                    case "division":
+                        operat = "/";
+                        break;
+                }
+                sb.AppendFormat("{0} {1} {2} = {3}\r\n", item.FirstValue.ToString(), operat, item.SecondValue.ToString(), item.Result.ToString());
+            }
+
+            string test = _pageMultiLine.Result.Text;
+            Assert.AreEqual(sb.ToString().TrimEnd(new char[] { '\r', '\n'}), _pageMultiLine.Result.Text);
         }
     }
 }

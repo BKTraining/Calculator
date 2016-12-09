@@ -96,11 +96,11 @@ this.ScenarioSetup(scenarioInfo);
                         "2"});
             table1.AddRow(new string[] {
                         "1",
-                        "Addition",
+                        "Subtraction",
                         "1"});
             table1.AddRow(new string[] {
                         "1",
-                        "Addition",
+                        "Multiplication",
                         "18"});
 #line 13
  testRunner.Given("I have entered the following value in the textbox calculator", ((string)(null)), table1, "Given ");
@@ -114,19 +114,19 @@ this.ScenarioSetup(scenarioInfo);
                         "Result"});
             table2.AddRow(new string[] {
                         "3",
-                        "+",
+                        "Addition",
                         "2",
                         "5"});
             table2.AddRow(new string[] {
                         "1",
-                        "-",
+                        "Subtraction",
                         "1",
                         "0"});
             table2.AddRow(new string[] {
                         "1",
-                        "*",
+                        "Multiplication",
                         "18",
-                        "0"});
+                        "18"});
 #line 19
  testRunner.Then("the result should be on the screen", ((string)(null)), table2, "Then ");
 #line hidden

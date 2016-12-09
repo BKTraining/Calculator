@@ -11,13 +11,13 @@
 @MultilineCalculator
 Scenario: Calculate a list of operation
 	Given I have entered the following value in the textbox calculator
-	|  FirstValue | Operator | SecondValue	|
-	|    3		 | Addition		|    2			|
-	|    1		 | Addition		|    1			|
-	|    1		 | Addition		|    18			|
+	|  FirstValue | Operator		| SecondValue	|
+	|    3		 | Addition			|    2			|
+	|    1		 | Subtraction		|    1			|
+	|    1		 | Multiplication	|    18			|
 	When I press result
 	Then the result should be on the screen
-	|  FirstValue | Operator | SecondValue	| Result	|
-	|	3		 | +		|    2			|   5		|
-	|	1		 | -		|    1			|	0		|
-	|	1		 | *		|    18			|	0		|
+	|  FirstValue | Operator		| SecondValue	| Result	|
+	|	3		 | Addition			|    2			|   5		|
+	|	1		 | Subtraction		|    1			|	0		|
+	|	1		 | Multiplication	|    18			|	18		|

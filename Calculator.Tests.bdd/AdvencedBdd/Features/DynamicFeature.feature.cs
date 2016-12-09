@@ -66,11 +66,15 @@ namespace Calculator.Tests.bdd.AdvencedBdd.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Create set of dynamic objects")]
-        public virtual void CreateSetOfDynamicObjects()
+        [NUnit.Framework.TestCaseAttribute("1", "39", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("3", "1", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("4", "1", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("2", "3", new string[0])]
+        public virtual void CreateSetOfDynamicObjects(string itemNumber, string itemAge, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create set of dynamic objects", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create set of dynamic objects", exampleTags);
 #line 6
- this.ScenarioSetup(scenarioInfo);
+this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Name",
@@ -100,7 +104,64 @@ namespace Calculator.Tests.bdd.AdvencedBdd.Features
 #line 7
     testRunner.When("I create a set of dynamic instances from this table", ((string)(null)), table1, "When ");
 #line 13
-    testRunner.Then("the 3 item should have Age equal to \'1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then(string.Format("the {0} item should have Age equal to {1}", itemNumber, itemAge), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Create set of dynamic objects v2")]
+        public virtual void CreateSetOfDynamicObjectsV2()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create set of dynamic objects v2", ((string[])(null)));
+#line 22
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "Age",
+                        "Birth date",
+                        "Length in meters"});
+            table2.AddRow(new string[] {
+                        "Marcus",
+                        "39",
+                        "1972-10-09",
+                        "1.96"});
+            table2.AddRow(new string[] {
+                        "Albert",
+                        "3",
+                        "2008-01-24",
+                        "1.03"});
+            table2.AddRow(new string[] {
+                        "Gustav",
+                        "1",
+                        "2010-03-19",
+                        "0.84"});
+            table2.AddRow(new string[] {
+                        "Arvid",
+                        "1",
+                        "2010-03-19",
+                        "0.85"});
+#line 23
+    testRunner.When("I create a set of dynamic instances from this table", ((string)(null)), table2, "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "itemNumber",
+                        "itemAge"});
+            table3.AddRow(new string[] {
+                        "1",
+                        "39"});
+            table3.AddRow(new string[] {
+                        "3",
+                        "1"});
+            table3.AddRow(new string[] {
+                        "4",
+                        "1"});
+            table3.AddRow(new string[] {
+                        "2",
+                        "3"});
+#line 29
+    testRunner.Then("the dynamic list of item will respecte those rules", ((string)(null)), table3, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

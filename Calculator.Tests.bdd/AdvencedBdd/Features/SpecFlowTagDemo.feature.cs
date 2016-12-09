@@ -161,18 +161,6 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 34
  testRunner.Then("before scenario hook with \'testTag1, testTag3\' is run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 37
-testRunner.Given("an item was sold with a discount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 38
-testRunner.When("a customer gets a refund", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 39
-testRunner.Then("he should only be refunded the discounted price.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 41
-testRunner.Given("an item was sold with a discount", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 42
-testRunner.When("a customer gets a refund", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
-testRunner.Then("he should only be refunded the discounted price.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

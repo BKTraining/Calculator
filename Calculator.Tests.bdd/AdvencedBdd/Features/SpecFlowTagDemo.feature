@@ -32,12 +32,3 @@ Scenario: A scenario with 2 tags
 	Given that my scenario has 2 tags
 	When I run the scenario
 	Then before scenario hook with 'testTag1, testTag3' is run
-
-
-Given an item was sold with a discount
-When a customer gets a refund
-Then he should only be refunded the discounted price.
-
-Given an item was sold with a discount
-When a customer gets a refund
-Then he should only be refunded the discounted price.
