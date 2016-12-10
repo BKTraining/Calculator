@@ -10,6 +10,7 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using Calculator.Tests.BddTest;
 using Calculator.Tests.bdd.Common;
+using System.Threading;
 
 namespace Calculator.Tests.bdd.AdvencedBdd
 {
@@ -30,9 +31,10 @@ namespace Calculator.Tests.bdd.AdvencedBdd
 
             iis = new IISExpress();
             iis.Start();
-
+            Thread.Sleep(30000);
             _driver = new DriverFactory().Create();
             _pageMultiLine = new PageMultiLine(_driver);
+
         }
 
         [AfterFeature]
