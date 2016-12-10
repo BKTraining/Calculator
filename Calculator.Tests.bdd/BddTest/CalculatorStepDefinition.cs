@@ -45,11 +45,17 @@ namespace Calculator.Tests.Features
             {
                 _driver.Quit();
                 _driver.Close();
-                iis.Stop();
             }
             catch (Exception)
             {
                 // Ignore errors if we are unable to close the browser
+            }
+            try
+            {
+                iis.Stop();
+            }
+            catch (Exception)
+            {
             }
         }
 

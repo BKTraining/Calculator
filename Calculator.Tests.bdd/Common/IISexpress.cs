@@ -67,6 +67,10 @@ namespace Calculator.Tests.bdd.Common
 
         public void Stop()
         {
+            if (_iisProcess.HasExited == false)
+            {
+                _iisProcess.Kill();
+            }
             _iisProcess.CloseMainWindow();
             _iisProcess.Dispose();
         }
