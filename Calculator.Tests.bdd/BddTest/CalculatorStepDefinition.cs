@@ -33,8 +33,7 @@ namespace Calculator.Tests.Features
         {
             iis = new IISExpress();
             iis.Start();
-
-            Thread.Sleep(60000);
+            
             _driver = new DriverFactory().Create();
             _indexPage = new IndexPage(_driver);
         }
