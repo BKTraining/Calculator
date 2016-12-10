@@ -31,7 +31,7 @@ namespace Calculator.Tests.bdd.AdvencedBdd
 
             iis = new IISExpress();
             iis.Start();
-            Thread.Sleep(30000);
+            Thread.Sleep(60000);
             _driver = new DriverFactory().Create();
             _pageMultiLine = new PageMultiLine(_driver);
 
