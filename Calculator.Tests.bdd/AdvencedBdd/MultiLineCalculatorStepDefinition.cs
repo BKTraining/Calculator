@@ -66,6 +66,7 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         [Given("I have entered the following value in the textbox calculator")]
         public void GivenIHaveEnteredSomethingIntoTheCalculator(IEnumerable<CalculatorItems> numberList)
         {
+<<<<<<< HEAD
             StringBuilder sb = new StringBuilder();
             string operat = "";
             foreach (var item in numberList)
@@ -89,6 +90,17 @@ namespace Calculator.Tests.bdd.AdvencedBdd
 
             }
             _pageMultiLine.AllCalculation.SendKeys(sb.ToString());
+=======
+            myNumbers = number.CreateSet<CalculatorItems>();
+            var toInsert = string.Empty;
+
+            foreach (CalculatorItems ci in myNumbers)
+            {
+                toInsert += ci.FirstValue + ci.OperatorChar + ci.SecondValue + "\r\n";
+            }
+
+            _pageMultiLine.AllCalculation.SendKeys(toInsert);
+>>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e
         }
 
 
@@ -100,6 +112,7 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         }
 
         [Then("the result should be on the screen")]
+<<<<<<< HEAD
         public void ThenTheResultShouldBe(IEnumerable<CalculatorItems> result)
         {
             StringBuilder sb = new StringBuilder();
@@ -126,6 +139,26 @@ namespace Calculator.Tests.bdd.AdvencedBdd
 
             string test = _pageMultiLine.Result.Text;
             Assert.AreEqual(sb.ToString().TrimEnd(new char[] { '\r', '\n'}), _pageMultiLine.Result.Text);
+=======
+        public void ThenTheResultShouldBe(Table expectedResult)
+        {
+            var temp = _pageMultiLine.Result.Text;
+
+            myNumbers = expectedResult.CreateSet<CalculatorItems>();
+
+            var expectedResultStr = string.Empty;
+
+            foreach (var ci in myNumbers)
+            {
+                expectedResultStr += ci.FirstValue + ci.OperatorChar + ci.SecondValue + "=" + ci.Result + "\r\n";
+            }
+
+            temp = _pageMultiLine.Result.Text.Replace(" ", "");
+            temp = temp.Replace(",", ".");
+            temp += "\r\n";
+
+            Assert.AreEqual(expectedResultStr, temp);
+>>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e
         }
     }
 }

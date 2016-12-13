@@ -54,7 +54,8 @@ namespace Calculator.Controllers
         public ActionResult MultiLineCalculator(ListOfCalculatorItem toCalculateLine)
         {
             ListOfCalculatorItem result = new ListOfCalculatorItem();
-            
+
+            if (toCalculateLine ==null || toCalculateLine.Count == 0) return View();
             CalculatorItems temp;
             foreach (CalculatorItems c in toCalculateLine)
             {

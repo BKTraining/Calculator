@@ -88,13 +88,14 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstValue",
-                        "Operator",
-                        "SecondValue"});
+                        "SecondValue",
+                        "Operator"});
             table1.AddRow(new string[] {
-                        "3",
-                        "Addition",
-                        "2"});
+                        "10",
+                        "10",
+                        "Subtraction"});
             table1.AddRow(new string[] {
+<<<<<<< HEAD
                         "1",
                         "Subtraction",
                         "1"});
@@ -102,17 +103,43 @@ this.ScenarioSetup(scenarioInfo);
                         "1",
                         "Multiplication",
                         "18"});
+=======
+                        "50",
+                        "10",
+                        "Subtraction"});
+            table1.AddRow(new string[] {
+                        "10",
+                        "-10",
+                        "Multiplication"});
+            table1.AddRow(new string[] {
+                        "10",
+                        "10",
+                        "Multiplication"});
+            table1.AddRow(new string[] {
+                        "1",
+                        "-5",
+                        "Division"});
+            table1.AddRow(new string[] {
+                        "50",
+                        "10",
+                        "Division"});
+            table1.AddRow(new string[] {
+                        "0",
+                        "10",
+                        "Division"});
+>>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e
 #line 13
  testRunner.Given("I have entered the following value in the textbox calculator", ((string)(null)), table1, "Given ");
-#line 18
+#line 24
  testRunner.When("I press result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstValue",
-                        "Operator",
                         "SecondValue",
+                        "Operator",
                         "Result"});
             table2.AddRow(new string[] {
+<<<<<<< HEAD
                         "3",
                         "Addition",
                         "2",
@@ -121,13 +148,50 @@ this.ScenarioSetup(scenarioInfo);
                         "1",
                         "Subtraction",
                         "1",
+=======
+                        "10",
+                        "10",
+                        "Subtraction",
+>>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e
                         "0"});
             table2.AddRow(new string[] {
+                        "50",
+                        "10",
+                        "Subtraction",
+                        "40"});
+            table2.AddRow(new string[] {
+                        "10",
+                        "-10",
+                        "Multiplication",
+                        "-100"});
+            table2.AddRow(new string[] {
+                        "10",
+                        "10",
+                        "Multiplication",
+                        "100"});
+            table2.AddRow(new string[] {
                         "1",
+<<<<<<< HEAD
                         "Multiplication",
                         "18",
                         "18"});
 #line 19
+=======
+                        "-5",
+                        "Division",
+                        "-0.2"});
+            table2.AddRow(new string[] {
+                        "50",
+                        "10",
+                        "Division",
+                        "5"});
+            table2.AddRow(new string[] {
+                        "0",
+                        "10",
+                        "Division",
+                        "0"});
+#line 25
+>>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e
  testRunner.Then("the result should be on the screen", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
