@@ -56,7 +56,7 @@ namespace Calculator.Tests.Features
         [Given("I'm browsing the calculator website")]
         public void GivenINavigateCalculatorWebsite()
         {
-            _driver.Navigate().GoToUrl("http://localhost:8080/Home/");
+            _driver.Navigate().GoToUrl("http://localhost:8081/Home/");
         }
 
 

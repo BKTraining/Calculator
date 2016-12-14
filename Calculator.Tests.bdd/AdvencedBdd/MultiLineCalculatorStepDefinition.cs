@@ -61,7 +61,7 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         [Given("I'm browsing the calculator website")]
         public void GivenINavigateCalculatorWebsite()
         {
-            _driver.Navigate().GoToUrl("http://localhost:8081/");
+            _driver.Navigate().GoToUrl("http://localhost:8081/Home/");
         }
 
         [Given("I'm on the Multiline calculator page")]
