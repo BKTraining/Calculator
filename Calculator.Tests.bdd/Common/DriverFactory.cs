@@ -32,11 +32,12 @@ namespace Calculator.Tests.BddTest
         {
             IWebDriver driver;
             DriverToUse driverToUse = (DriverToUse)Enum.Parse(typeof(DriverToUse), ConfigurationManager.AppSettings["DriverToUse"]);
-           
+
+            string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "//IEDriverServer.exe";
+
             switch (driverToUse)
             {
                 case DriverToUse.InternetExplorer:
-                    string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "//IEDriverServer.exe";
                     AppLocation = @"C:\Drivers\IEDriverServer.exe";
                     //    System.Environment.SetEnvironmentVariable("webdriver.ie.driv‌​er", AppLocation + "//IEDriverServer.exe");
 
@@ -47,6 +48,8 @@ namespace Calculator.Tests.BddTest
                 case DriverToUse.Firefox:
                     var firefoxProfile = FirefoxProfile;
                     firefoxProfile.Clean();
+                    AppLocation = @"C:\Drivers\geckodriver.exe";
+                    System.Environment.SetEnvironmentVariable("webdriver.gecko.driver", AppLocation);
                     firefoxProfile.Port = new Random().Next(7000, 7500);
                     //driver = new FirefoxDriver(firefoxProfile);
                     driver = new FirefoxDriver(new FirefoxOptions());
