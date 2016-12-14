@@ -52,8 +52,8 @@ namespace Calculator.Tests.BddTest
                     System.Environment.SetEnvironmentVariable("webdriver.gecko.driver", AppLocation);
                     firefoxProfile.Port = new Random().Next(7000, 7500);
                     //driver = new FirefoxDriver(firefoxProfile);
-                    driver = new FirefoxDriver(new FirefoxOptions());
-                    driver.Manage().Window.Maximize();
+                    DesiredCapabilities capabilities = DesiredCapabilities.Firefox();
+                    driver = new FirefoxDriver();
                     break;
                 case DriverToUse.Chrome:
                     driver = new ChromeDriver();
