@@ -36,9 +36,13 @@ namespace Calculator.Tests.BddTest
             switch (driverToUse)
             {
                 case DriverToUse.InternetExplorer:
-                    string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                    System.Environment.SetEnvironmentVariable("webdriver.ie.driv‌​er", AppLocation + "//IEDriverServer.exe");
-                    driver = new InternetExplorerDriver(AppDomain.CurrentDomain.BaseDirectory, new InternetExplorerOptions(), TimeSpan.FromMinutes(5));
+                    string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "//IEDriverServer.exe";
+                    AppLocation = @"C:\Drivers\IEDriverServer.exe";
+                    //    System.Environment.SetEnvironmentVariable("webdriver.ie.driv‌​er", AppLocation + "//IEDriverServer.exe");
+
+                    System.Environment.SetEnvironmentVariable("webdriver.ie.driver", AppLocation);
+                    //     driver = new InternetExplorerDriver(AppDomain.CurrentDomain.BaseDirectory, new InternetExplorerOptions(), TimeSpan.FromMinutes(5));
+                    driver = new InternetExplorerDriver();
                     break;
                 case DriverToUse.Firefox:
                     var firefoxProfile = FirefoxProfile;
