@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Calculator.Tests.bdd.Common
@@ -14,7 +15,7 @@ namespace Calculator.Tests.bdd.Common
     {
         Process _iisProcess;
 
-        public void StartIisExpress()
+        private void StartIisExpress()
         {
 
             string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -53,6 +54,11 @@ namespace Calculator.Tests.bdd.Common
 
         }
 
+        public void Start()
+        {
+            var thread = new Thread(new ThreadStart(StartIisExpress)) { IsBackground = true };
+            thread.Start();
+        }
 
         public void Stop()
         {

@@ -25,16 +25,14 @@ namespace Calculator.Tests.Features
         private static IndexPage _indexPage;
         private CalculatorItems calc = new CalculatorItems();
         private static string calculateResult = string.Empty;
-        private Process _iisProcess;
-
         private static IISExpress iis;
+
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
       [BeforeFeature]
         public static void ScenarioSetUp()
         {
             iis = new IISExpress();
-            var thread = new Thread(new ThreadStart(iis.StartIisExpress)) { IsBackground = true };
-            thread.Start();
+            iis.Start();
 
             _driver = new DriverFactory().Create();
             _indexPage = new IndexPage(_driver);

@@ -9,6 +9,7 @@ using Calculator.Tests.bdd.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using Calculator.Tests.BddTest;
+using Calculator.Tests.bdd.Common;
 
 namespace Calculator.Tests.bdd.AdvencedBdd
 {
@@ -21,10 +22,15 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         private IEnumerable<CalculatorItems> myNumbers;
         private static PageMultiLine _pageMultiLine;
         private static IWebDriver _driver;
+        private static IISExpress iis;
 
         [BeforeFeature]
         public static void ScenarioSetUp()
         {
+
+            iis = new IISExpress();
+            iis.Start();
+
             _driver = new DriverFactory().Create();
             _pageMultiLine = new PageMultiLine(_driver);
         }
@@ -36,6 +42,7 @@ namespace Calculator.Tests.bdd.AdvencedBdd
             {
                 _driver.Quit();
                 _driver.Close();
+                iis.Stop();
             }
             catch (Exception)
             {
