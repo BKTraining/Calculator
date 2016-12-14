@@ -1,12 +1,17 @@
 ﻿using Calculator.Models;
+using Calculator.Tests.bdd.Common;
 using Calculator.Tests.BddTest;
 using Calculator.Tests.BddTest.PageObjects;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Threading;
 using TechTalk.SpecFlow;
 
 namespace Calculator.Tests.Features
@@ -20,11 +25,17 @@ namespace Calculator.Tests.Features
         private static IndexPage _indexPage;
         private CalculatorItems calc = new CalculatorItems();
         private static string calculateResult = string.Empty;
+        private Process _iisProcess;
 
+        private static IISExpress iis;
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
-        [BeforeFeature]
+      [BeforeFeature]
         public static void ScenarioSetUp()
         {
+            iis = new IISExpress();
+            var thread = new Thread(new ThreadStart(iis.StartIisExpress)) { IsBackground = true };
+            thread.Start();
+
             _driver = new DriverFactory().Create();
             _indexPage = new IndexPage(_driver);
         }
@@ -36,6 +47,7 @@ namespace Calculator.Tests.Features
             {
                 _driver.Quit();
                 _driver.Close();
+                iis.Stop();
             }
             catch (Exception)
             {
@@ -46,7 +58,7 @@ namespace Calculator.Tests.Features
         [Given("I'm browsing the calculator website")]
         public void GivenINavigateCalculatorWebsite()
         {
-            _driver.Navigate().GoToUrl("http://localhost:8081/");
+            _driver.Navigate().GoToUrl("http://localhost:8080/Home/");
         }
 
 

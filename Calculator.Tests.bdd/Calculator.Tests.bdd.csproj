@@ -132,6 +132,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpecFlowTagDemo.feature</DependentUpon>
     </Compile>
+    <Compile Include="Common\IISexpress.cs" />
     <Compile Include="PageObjects\IndexPage.cs" />
     <Compile Include="AdvencedBdd\SpecFlowTagDemo.cs" />
     <Compile Include="PageObjects\PageMultiLine.cs" />
