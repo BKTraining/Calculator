@@ -5,6 +5,8 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using System.Configuration;
+using System.IO;
+using System.Reflection;
 
 namespace Calculator.Tests.BddTest
 {
@@ -30,10 +32,12 @@ namespace Calculator.Tests.BddTest
         {
             IWebDriver driver;
             DriverToUse driverToUse = (DriverToUse)Enum.Parse(typeof(DriverToUse), ConfigurationManager.AppSettings["DriverToUse"]);
-
+           
             switch (driverToUse)
             {
                 case DriverToUse.InternetExplorer:
+                    string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                    System.Environment.SetEnvironmentVariable("webdriver.ie.driv‌​er", AppLocation + "//IEDriverServer.exe");
                     driver = new InternetExplorerDriver(AppDomain.CurrentDomain.BaseDirectory, new InternetExplorerOptions(), TimeSpan.FromMinutes(5));
                     break;
                 case DriverToUse.Firefox:
