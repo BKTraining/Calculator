@@ -91,8 +91,8 @@ this.ScenarioSetup(scenarioInfo);
                         "SecondValue",
                         "Operator"});
             table1.AddRow(new string[] {
-                        "10",
-                        "10",
+                        "11",
+                        "11",
                         "Subtraction"});
             table1.AddRow(new string[] {
                         "50",
@@ -129,8 +129,8 @@ this.ScenarioSetup(scenarioInfo);
                         "Operator",
                         "Result"});
             table2.AddRow(new string[] {
-                        "10",
-                        "10",
+                        "11",
+                        "11",
                         "Subtraction",
                         "0"});
             table2.AddRow(new string[] {

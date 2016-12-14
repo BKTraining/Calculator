@@ -12,7 +12,7 @@
 Scenario: Calculate a list of operation
 	Given I have entered the following value in the textbox calculator
     | FirstValue | SecondValue | Operator       |
-    | 10         | 10          | Subtraction    |
+    | 11         | 11          | Subtraction    |
     | 50         | 10          | Subtraction    |
     | 10         | -10         | Multiplication |
     | 10         | 10          | Multiplication |
@@ -24,7 +24,7 @@ Scenario: Calculate a list of operation
 	When I press result
 	Then the result should be on the screen
 	|  FirstValue	| SecondValue	| Operator			| Result	|
-    | 10			| 10			| Subtraction       | 0         |
+    | 11			| 11			| Subtraction       | 0         |
     | 50			| 10            | Subtraction       | 40		|
     | 10			| -10           | Multiplication    | -100		|
     | 10			| 10            | Multiplication    | 100		|

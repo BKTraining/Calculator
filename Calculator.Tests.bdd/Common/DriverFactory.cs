@@ -33,23 +33,23 @@ namespace Calculator.Tests.BddTest
             IWebDriver driver;
             DriverToUse driverToUse = (DriverToUse)Enum.Parse(typeof(DriverToUse), ConfigurationManager.AppSettings["DriverToUse"]);
 
-            string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "//IEDriverServer.exe";
+            string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             switch (driverToUse)
             {
                 case DriverToUse.InternetExplorer:
-                    AppLocation = @"C:\Drivers\IEDriverServer.exe";
+          //          AppLocation = @"C:\Drivers\IEDriverServer.exe";
                     //    System.Environment.SetEnvironmentVariable("webdriver.ie.driv‌​er", AppLocation + "//IEDriverServer.exe");
 
-                    System.Environment.SetEnvironmentVariable("webdriver.ie.driver", AppLocation);
+                    System.Environment.SetEnvironmentVariable("webdriver.ie.driver", AppLocation + "//IEDriverServer.exe");
                     //     driver = new InternetExplorerDriver(AppDomain.CurrentDomain.BaseDirectory, new InternetExplorerOptions(), TimeSpan.FromMinutes(5));
                     driver = new InternetExplorerDriver();
                     break;
                 case DriverToUse.Firefox:
                     var firefoxProfile = FirefoxProfile;
                     firefoxProfile.Clean();
-                    AppLocation = @"C:\Drivers\geckodriver.exe";
-                    System.Environment.SetEnvironmentVariable("webdriver.gecko.driver", AppLocation);
+        //            AppLocation = @"C:\Drivers\geckodriver.exe";
+                    System.Environment.SetEnvironmentVariable("webdriver.gecko.driver", AppLocation + "//geckodriver.exe");
                     firefoxProfile.Port = new Random().Next(7000, 7500);
                     //driver = new FirefoxDriver(firefoxProfile);
                     DesiredCapabilities capabilities = DesiredCapabilities.Firefox();
