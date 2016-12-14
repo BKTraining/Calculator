@@ -5,6 +5,8 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Remote;
 using System.Configuration;
+using System.IO;
+using System.Reflection;
 
 namespace Calculator.Tests.BddTest
 {
@@ -31,17 +33,27 @@ namespace Calculator.Tests.BddTest
             IWebDriver driver;
             DriverToUse driverToUse = (DriverToUse)Enum.Parse(typeof(DriverToUse), ConfigurationManager.AppSettings["DriverToUse"]);
 
+            string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "//IEDriverServer.exe";
+
             switch (driverToUse)
             {
                 case DriverToUse.InternetExplorer:
-                    driver = new InternetExplorerDriver(AppDomain.CurrentDomain.BaseDirectory, new InternetExplorerOptions(), TimeSpan.FromMinutes(5));
+                    AppLocation = @"C:\Drivers\IEDriverServer.exe";
+                    //    System.Environment.SetEnvironmentVariable("webdriver.ie.driv‌​er", AppLocation + "//IEDriverServer.exe");
+
+                    System.Environment.SetEnvironmentVariable("webdriver.ie.driver", AppLocation);
+                    //     driver = new InternetExplorerDriver(AppDomain.CurrentDomain.BaseDirectory, new InternetExplorerOptions(), TimeSpan.FromMinutes(5));
+                    driver = new InternetExplorerDriver();
                     break;
                 case DriverToUse.Firefox:
                     var firefoxProfile = FirefoxProfile;
                     firefoxProfile.Clean();
+                    AppLocation = @"C:\Drivers\geckodriver.exe";
+                    System.Environment.SetEnvironmentVariable("webdriver.gecko.driver", AppLocation);
                     firefoxProfile.Port = new Random().Next(7000, 7500);
-                    driver = new FirefoxDriver(firefoxProfile);
-                    driver.Manage().Window.Maximize();
+                    //driver = new FirefoxDriver(firefoxProfile);
+                    DesiredCapabilities capabilities = DesiredCapabilities.Firefox();
+                    driver = new FirefoxDriver();
                     break;
                 case DriverToUse.Chrome:
                     driver = new ChromeDriver();
