@@ -11,17 +11,6 @@
 @MultilineCalculator
 Scenario: Calculate a list of operation
 	Given I have entered the following value in the textbox calculator
-	|  FirstValue | Operator		| SecondValue	|
-	|    3		 | Addition			|    2			|
-	|    1		 | Subtraction		|    1			|
-	|    1		 | Multiplication	|    18			|
-	When I press result
-	Then the result should be on the screen
-	|  FirstValue | Operator		| SecondValue	| Result	|
-	|	3		 | Addition			|    2			|   5		|
-	|	1		 | Subtraction		|    1			|	0		|
-	|	1		 | Multiplication	|    18			|	18		|
-=======
     | FirstValue | SecondValue | Operator       |
     | 10         | 10          | Subtraction    |
     | 50         | 10          | Subtraction    |
@@ -42,4 +31,3 @@ Scenario: Calculate a list of operation
     | 1             | -5            | Division          | -0.2		|
     | 50			| 10            | Division          | 5         |
     | 0             | 10            | Division          | 0         |
->>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e

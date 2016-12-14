@@ -59,7 +59,7 @@ namespace Calculator.Tests.Features
         [Given("I have choose (.*) as an operation into the calculator")]
         public void GivenIHaveEnteredSomethingIntoTheCalculator(string Operator)
         {
-            _indexPage.Operator.SendKeys(Operator);
+            _indexPage.Operator.SendKeys(Operator.Trim()[0].ToString());
         }
 
 
@@ -74,11 +74,14 @@ namespace Calculator.Tests.Features
         public void WhenIpressresult()
         {
             _indexPage.btnCalculate.Click();
+            System.Threading.Thread.Sleep(800);
         }
 
         [Then("the result should be (.*) on the screen")]
         public void ThenTheResultShouldBe(String result)
         {
+            string tmp = _indexPage.Result.Text;
+
             Assert.AreEqual(result, _indexPage.Result.Text);
         }
 

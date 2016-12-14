@@ -66,7 +66,6 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         [Given("I have entered the following value in the textbox calculator")]
         public void GivenIHaveEnteredSomethingIntoTheCalculator(IEnumerable<CalculatorItems> numberList)
         {
-<<<<<<< HEAD
             StringBuilder sb = new StringBuilder();
             string operat = "";
             foreach (var item in numberList)
@@ -90,7 +89,12 @@ namespace Calculator.Tests.bdd.AdvencedBdd
 
             }
             _pageMultiLine.AllCalculation.SendKeys(sb.ToString());
-=======
+        }
+
+        // this is the same as previous but using the createset feature
+        [Given("I have entered the following value in the textbox calculator2")]
+        public void GivenIHaveEnteredSomethingIntoTheCalculator2(Table number)
+        {
             myNumbers = number.CreateSet<CalculatorItems>();
             var toInsert = string.Empty;
 
@@ -100,7 +104,6 @@ namespace Calculator.Tests.bdd.AdvencedBdd
             }
 
             _pageMultiLine.AllCalculation.SendKeys(toInsert);
->>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e
         }
 
 
@@ -112,36 +115,9 @@ namespace Calculator.Tests.bdd.AdvencedBdd
         }
 
         [Then("the result should be on the screen")]
-<<<<<<< HEAD
-        public void ThenTheResultShouldBe(IEnumerable<CalculatorItems> result)
-        {
-            StringBuilder sb = new StringBuilder();
-            string operat = "";
-            foreach (var item in result)
-            {
-                switch (item.Operator.ToString().ToLower())
-                {
-                    case "addition":
-                        operat = "+";
-                        break;
-                    case "subtraction":
-                        operat = "-";
-                        break;
-                    case "multiplication":
-                        operat = "*";
-                        break;
-                    case "division":
-                        operat = "/";
-                        break;
-                }
-                sb.AppendFormat("{0} {1} {2} = {3}\r\n", item.FirstValue.ToString(), operat, item.SecondValue.ToString(), item.Result.ToString());
-            }
-
-            string test = _pageMultiLine.Result.Text;
-            Assert.AreEqual(sb.ToString().TrimEnd(new char[] { '\r', '\n'}), _pageMultiLine.Result.Text);
-=======
         public void ThenTheResultShouldBe(Table expectedResult)
         {
+            System.Threading.Thread.Sleep(500);
             var temp = _pageMultiLine.Result.Text;
 
             myNumbers = expectedResult.CreateSet<CalculatorItems>();
@@ -158,7 +134,6 @@ namespace Calculator.Tests.bdd.AdvencedBdd
             temp += "\r\n";
 
             Assert.AreEqual(expectedResultStr, temp);
->>>>>>> 1ebac0a15b74a2202fd4ab45b58a313fc7763b5e
         }
     }
 }
