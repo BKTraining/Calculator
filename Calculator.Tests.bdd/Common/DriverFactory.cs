@@ -40,7 +40,8 @@ namespace Calculator.Tests.BddTest
                     var firefoxProfile = FirefoxProfile;
                     firefoxProfile.Clean();
                     firefoxProfile.Port = new Random().Next(7000, 7500);
-                    driver = new FirefoxDriver(firefoxProfile);
+                    //driver = new FirefoxDriver(firefoxProfile);
+                    driver = new FirefoxDriver(new FirefoxOptions());
                     driver.Manage().Window.Maximize();
                     break;
                 case DriverToUse.Chrome:
