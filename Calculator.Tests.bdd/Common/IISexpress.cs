@@ -19,6 +19,7 @@ namespace Calculator.Tests.bdd.Common
         {
 
             string AppLocation = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            AppLocation = @"C:\Git\CalculatorAdvenced\Calculator";
             var startInfo = new ProcessStartInfo
             {
                 WindowStyle = ProcessWindowStyle.Normal,
